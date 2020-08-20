@@ -1,0 +1,47 @@
+/* h1 is a selector */
+/* this is how you comment in CSS */
+/* can
+multi
+line
+comment yeah! */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+}
+
+/* apply styling to class */
+.cool {
+    background-color: aqua;
+}
+
+/* apply styling to another class */
+.warm {
+    background-color: yellow;
+}
+
+/* apply styling to id 'blah' */
+#blah {
+    background-color: pink;
+}
+
+.dotted {
+    border-style: dotted;
+}
+
+.solid {
+    border-style: solid;
+}
+
+.inset {
+    border-style: inset;
+}
+
+.haha {
+    text-align: center;
+    color: green;
+}

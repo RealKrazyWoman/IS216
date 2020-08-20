@@ -1,0 +1,16 @@
+/* This applies to all <h1> elements whose PARENT is <div> 
+
+Child selector
+*/
+div h1 {
+    color: blue;
+    background-color: pink;
+    font-style: italic;
+}
+
+.second > p {
+    background-color: yellow;
+    color: red;
+    font-size: 16px;
+    text-align: center;
+}

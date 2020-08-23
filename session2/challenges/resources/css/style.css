@@ -1,0 +1,27 @@
+/* DO NOT MODIFY THE FIRST 2 LINES OF <body> declaration block.
+   You can ADD more CSS script below the 2 lines.
+*/
+body {
+    margin: 0;
+    padding: 0;
+    /* You can add more CSS script below */
+}
+
+
+
+/* Add your CSS script below */
+
+
+
+/* DO NOT MODIFY THIS */
+@media(max-width: 600px) {
+    #main-content {
+        width: 100%;
+        float: none;
+    }
+
+    #side-bar {
+        width: 100%;
+        float: none;
+    }
+}

@@ -2,4 +2,5 @@
  
 ## Welcome to Web Application Development 2
 
-### Teaching Team will post lab exercise(s) for each session.
+### YouTube Playlist ###
+https://www.youtube.com/playlist?list=PLtG7vQpkpehK2f5I11NCQCLVqybahOIwD

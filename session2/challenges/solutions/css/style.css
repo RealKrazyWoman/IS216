@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(251, 232, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#main-header {
+    background-color: yellow;
+    color: blue;
+}
+
+#navigation-bar {
+    background-color: grey;
+    color: white;
+}
+
+#navigation-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navigation-bar li {
+    display: inline;
+}
+
+#navigation-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 20px;
+}
+
+#top-content {
+    background-color: rgb(196, 157, 116);
+    background-image: url('../images/hyunbin_bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 400px;
+}
+
+#top-content h1 {
+    color: white;
+    font-size: 40px;
+    line-height: 1.5em;
+    padding-top: 30px;
+}
+
+#main-content {
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+#side-bar {
+    float: right;
+    width: 30%;
+    background-color: rgb(58, 157, 0);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#main-footer {
+    background-color: rgb(82, 81, 81);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+@media(max-width: 600px) {
+    #main-content {
+        width: 100%;
+        float: none;
+    }
+
+    #side-bar {
+        width: 100%;
+        float: none;
+    }
+}

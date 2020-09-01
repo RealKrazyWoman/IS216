@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krazy Woman - Challenge 1</title>
+
+    <!-- Internal CSS styling -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightyellow;
+
+            background-image: url("images/justin_bg.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .outer-box {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+        }
+
+        .header-box {
+            background-color: black;
+            color: white;
+
+            border: 10px blue solid;
+            border-width: 5px;
+            border-top-style: dotted;
+            border-bottom-style: dotted;
+
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            line-height: 1.5em;
+        }
+
+        /* Change header-box's h1 */
+        .header-box h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 800;
+            font-style: italic;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: 0.5em;
+            word-spacing: 1em;
+            padding-bottom: 10px;
+        }
+
+        .middle-box {
+            border: 3px dotted red;
+            background-color: yellow;
+            margin-top: 20px;
+            padding: 10px;
+            border-width: 10px;
+        }
+
+        .middle-box h1 {
+            width: 50%;
+            margin: auto;
+            padding: 15px;
+            background-color: pink;
+            text-align: center;
+            border-style: dotted;
+            border-color: blue;
+            border-width: 3px;
+            margin-bottom: 15px;
+        }
+
+        .middle-box p {
+            line-height: 2em;
+        }
+
+        .bottom-box {
+            border: 3px solid green;
+            background-color: rgb(115, 255, 119);
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 30px;
+        }
+
+        .bottom-box h2 {
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .bottom-box ul {
+            list-style-position: inside;
+            list-style-image: url('images/justin_list_button.png');
+        }
+
+        .bottom-box li {
+            border-bottom: dotted 2px black;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: orangered;
+        }
+
+        a:hover {
+            color: blue;
+            background-color: yellow;
+        }
+
+        .love-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: purple;
+        }
+
+        .love-box h2 {
+            margin-bottom: 20px;
+            background-color: pink;
+            border-style: dotted;
+            border-color: red;
+            border-width: 3px;
+            text-align: center;
+        }
+
+        .form-field {
+            padding-bottom: 15px;
+        }
+
+        .form-field label {
+            display: block;
+        }
+
+        .form-field input[type="text"], .form-field textarea {
+            width: 60%;
+            padding: 10px;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size:x-large;
+        }
+
+        .footer-box {
+            width: 100%;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-size: medium;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="outer-box">
+
+        <div class="header-box">
+            <h1>Justin Bieber</h1>
+            <p>
+                Justin Drew Bieber is a Canadian singer and songwriter. Discovered at age 13 by talent manager Scooter Braun after he had watched his YouTube cover song videos, Bieber was signed to RBMG Records in 2008. 
+            </p>
+        </div>
+
+
+        <div class="middle-box">
+            <h1>Early Life</h1>
+            <p>
+                Bieber was born on March 1, 1994, in London, Ontario, at St Joseph's Hospital, and was raised in Stratford, Ontario. He is the only child of Jeremy Jack Bieber and Pattie Mallette, who were never married. Mallette's mother Diane and stepfather Bruce helped her raise her son. Bieber's ancestry includes French-Canadian, Irish, English, Scottish, and German.
+            </p>
+            <p style="text-align: center; font-style: italic; background-color: aqua;">
+                For more information, visit <a href="https://en.wikipedia.org/wiki/Justin_Bieber" target="_blank">this Wiki page</a> and read!
+            </p>
+        </div>
+
+        <div class="bottom-box">
+            <h2>Describe Justin</h2>
+            <ul>
+                <li>Talented</li>
+                <li>Handsome</li>
+                <li>He is <span style="text-decoration: line-through; font-style:italic; color: red;">single</span> <span style="color: blue; font-weight:bold;">married</span></li>
+            </ul>
+        </div>
+
+        <div class="love-box">
+            <h2>Send My Love</h2>
+            
+            <form>
+
+                <div class="form-field">
+                    <label>Name: </label>
+                    <input type="text" name="myname">
+                </div>
+
+                <div class="form-field">
+                    <label>Email: </label>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="form-field">
+                    <label>Love Letter:</label>
+                    <textarea name="loveletter"></textarea>
+                </div>
+
+                <input type="submit" class="button" value="Send My Love">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-box">
+        <p>
+            Copyright &copy; 2020 Krazy Woman
+        </p>
+    </div>
+    
+</body>
+</html>

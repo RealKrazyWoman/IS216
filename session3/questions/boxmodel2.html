@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Box Model - Nested 2</title>
+
+    <style>
+
+        h1{
+            background-color:yellow;
+        }
+    
+        h3{
+            background-color:pink;
+        }
+    
+        .one{
+            background-color:lightgreen;
+            border:8px solid red;
+        }        
+
+        .two{
+            background-color:aqua;
+            border: 8px solid blue;
+        }
+    
+        .two-p1{
+            border: 5px solid pink;
+            padding: 50px;
+        }
+      
+        .two-p2{
+            border: 5px solid pink;
+            padding: 10px;
+            margin: 40px;
+        }
+    
+        .two-div1{
+
+        }
+    
+        .three{
+            background-color:orchid;
+            border: 8px solid black;
+            margin-top:60px;
+        }
+        
+    </style>
+    
+   
+</head>
+<body>
+ 
+    <h1> Hello World - Box Model</h1>
+
+    <div class="one">
+        <span style="font-weight:bold">~ DIV 1 ~</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ut, recusandae maiores fuga iusto beatae consequuntur molestias voluptatum aspernatur. Adipisci culpa minus dicta at quod provident possimus molestiae nisi ipsam!
+    </div>
+
+    <div class="two">
+        <span style="font-weight:bold">~ DIV 2 ~</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam officia aut error tempore distinctio exercitationem! Odio, quidem exercitationem, eligendi ad necessitatibus commodi quod perferendis ducimus nobis hic architecto quo.
+
+        <p class="two-p1">
+            <span style="font-weight:bold"> ~~ Paragraph 1 in DIV 2 ~~</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae in magni placeat quos esse quas sint veritatis quis dolores cumque? A ex nihil rem rerum fugit esse veritatis magni quos.
+        </p>
+
+        <p class="two-p2">
+            <span style="font-weight:bold">~~ Paragraph 2 in DIV 2 ~~</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae in magni placeat quos esse quas sint veritatis quis dolores cumque? A ex nihil rem rerum fugit esse veritatis magni quos.
+        </p>
+
+        <div class="two-div1">
+            <span style="font-weight:bold">~ DIV 1 ~</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque est autem in maiores. Voluptates beatae enim obcaecati ea. Recusandae id adipisci eaque harum illum qui consequuntur alias dignissimos amet itaque.
+        </div>
+
+    </div>
+
+    <div class="three">
+        <span style="font-weight:bold">~ DIV 3 ~</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non totam officia aut error tempore distinctio exercitationem! Odio, quidem exercitationem, eligendi ad necessitatibus commodi quod perferendis ducimus nobis hic architecto quo
+    </div>
+
+    <h3> The End </h3>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* DO NOT MODIFY THE FIRST 2 LINES OF <body> declaration block.
+   You can ADD more CSS script below the 2 lines.
+*/
+body {
+    margin: 0;
+    padding: 0;
+    /* You can add more CSS script below */
+}
+
+/* Add your CSS script below */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#main-header {
+    background-color: yellow;
+    line-height: 75px;
+    margin: -25px 0 -25px 0;
+}
+
+#main-header > div {
+    color:blue;
+    margin-left: 60px; /*THIS LINE*/
+}
+
+#navigation-bar {
+    background-color: grey;
+    margin: -25px 0 -20px 0;
+}
+
+#navigation-bar > .box > ul {
+    line-height: 60px;
+    margin-left: 25px;
+}
+
+#navigation-bar > .box > ul > li {
+    display: inline;
+    list-style-type: none;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+#navigation-bar > .box > ul > li > a {
+    color:white;
+    text-decoration: none;
+}
+
+#top-content {
+    background-color: burlywood;
+}
+
+#top-content > .box {
+    color:white;
+    text-align:center;
+    padding: 10% 5% 10% 5%;
+    line-height: 30px;
+    margin-left: 8%;
+    margin-right:8%;
+
+    background-image: url('../images/hyunbin_bg.jpg');
+    background-position-x: 35%;
+    background-repeat: no-repeat;
+}
+
+.box:nth-child(4) {
+    background-color: rgb(250, 238, 255);
+    margin: -25px 0 -10px 0;
+    padding: 20px 10px 20px 10px;
+    overflow:auto;
+}
+
+.box:nth-child(4) > section {
+    width: 50%;
+    margin-left: 10%;
+    float:left;
+}
+
+.box:nth-child(4) > aside {
+    background-color:green;
+    color:white;
+    width:20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 30px;
+    float:left;
+    padding: 3px 3px 3px 3px;
+}
+
+.clearfix{
+    clear:both
+}
+
+#main-footer {
+    background-color: lightgrey;
+    text-align:center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+/* DO NOT MODIFY THIS */
+@media(max-width: 600px) {
+    #main-content {
+        width: 100%;
+        float: none;
+    }
+
+    #side-bar {
+        width: 100%;
+        float: none;
+    }
+}

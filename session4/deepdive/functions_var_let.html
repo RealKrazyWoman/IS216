@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Functions - var versus let</title>
+
+    <script>
+
+        // Variable Scope in Blocks (e.g. if, else if... for loop)
+        let greet = "Hello Justin!";
+        let love = 5;
+
+        console.log("[OUTSIDE - BEFORE] " + greet);
+
+        // Block
+        if( love > 3 ) {
+            // let is BLOCK-scoped
+            // Creating a brand new variable - scope is limited to THIS if block!
+            let greet = "Hello Babe!";
+            console.log("[INSIDE if - AFTER] " + greet);
+        }
+        // the brand new 'greet' variable... is GONE
+
+        console.log("[OUTSIDE - AFTER] " + greet);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

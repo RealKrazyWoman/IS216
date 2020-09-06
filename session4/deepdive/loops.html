@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Loops</title>
+
+    <!-- JavaScript below -->
+    <script>
+
+        // Array
+        var friends = [ 'Rachel', 'Monica', 'Phoebe', 'Chandler', 'Joey', 'Ross' ];
+
+
+        // For loop with index
+        var counter;
+        for( counter = 0; counter < friends.length; counter++ ) {
+            console.log( friends[counter] );
+        }
+
+        console.log("===================================");
+
+        // Another for loop
+        for(friend of friends) {
+            console.log( friend );
+        }
+
+        console.log("===================================");
+
+        // Object
+        var justin = {
+            name: 'Justin Bieber',
+            occupation: 'Artist',
+            marital_status: 'Married',
+            look: 'Very Handsome',
+            honest: true
+        }
+
+        // for loop
+        for(attribute in justin) {
+            console.log( attribute + " : " + justin[attribute] );
+        }
+
+        console.log("===================================");
+
+        // An Array of Objects
+        var people = [
+            {
+                name: 'Justin Bieber',
+                occupation: 'Artist',
+                marital_status: 'Married'
+            },
+            {
+                name: 'Selena Gomez',
+                occupation: 'Singer',
+                marital_status: 'Single'
+            },
+            {
+                name: 'Supreme Leader',
+                occupation: 'Leader',
+                marital_status: 'Married'
+            }
+        ];
+
+        // For loop
+        for( person of people ) {
+            console.log( person["name"] ); // Print only name attribute of each Object
+        }
+
+        console.log("===================================");
+
+        // Adding an element to the END of an Array
+        console.log("====== (Before adding Gigi) ======");
+        console.log( friends );
+        friends.push( "Gigi" );
+        console.log("====== (After adding Gigi) ======");
+        console.log( friends );
+
+        console.log("===================================");
+
+        // Removing the LAST element of an Array
+        console.log("====== (Before removing Gigi) ======");
+        console.log( friends );
+        friends.pop();
+        console.log("====== (After removing Gigi) ======");
+        console.log( friends );
+
+        console.log("===================================");
+
+        // Removing the FIRST element of an Array
+        console.log("====== (Before removing Rachel) ======");
+        console.log( friends );
+        var name = friends.shift();
+        console.log( "Friend " + name + " has been removed!" );
+        console.log("====== (After removing Rachel) ======");
+        console.log( friends );
+
+        console.log("===================================");
+
+        // Adding a new element as the FIRST element of an Array
+        console.log("====== (Before adding Ceph) ======");
+        console.log( "Currently, you only have " + friends.length + " friends");
+        console.log( friends );
+        var len = friends.unshift("Ceph");
+        console.log("====== (After adding Ceph) ======");
+        console.log( "You have " + len + " friends now!");
+        console.log( friends );
+
+        console.log("===================================");
+
+        // Adding a new element as the SECOND element of an Array
+        // As a result, the current 2nd element will be PUSHED to the 3rd position
+        //   and the current 3rd element will become 4th... and so on.
+        console.log("====== (Before adding Stephen as 2nd element) ======");
+        console.log( "Currently, you have the following friends:");
+        console.log( friends );
+        friends.splice( 1, 0, "Stephen" );
+        console.log("====== (After adding Stephen as 2nd element) ======");
+        console.log( "You have the following friends now:");
+        console.log( friends );
+
+        console.log("===================================");
+
+        // I don't want to be friends with Stephen anymore!
+        // I want to replace Stephen (currently the 2nd element) with
+        // my new friend Dwight.
+        // Dwight shall be the 2nd element in an updated Array.
+        console.log("====== (Before Dwight replaces Stephen as the 2nd element) ======");
+        console.log( "Currently, you have the following friends:");
+        console.log( friends );
+        friends.splice( 1, 1, "Dwight" );
+        console.log("====== (After Dwight replaces Stephen as the 2nd element ======");
+        console.log( "You have the following friends now:");
+        console.log( friends );
+
+        console.log("===================================");
+
+        // I want to form a secret group with friends (3rd, 4th and 5th elements)
+        var secret_group = friends.slice(2, 5);
+        console.log( "You have the following secret group friends now:");
+        console.log( secret_group );
+
+        console.log("===================================");
+
+        // Sort
+        console.log( friends.sort() );
+
+        // Reverse sort
+        console.log( friends.reverse() );
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

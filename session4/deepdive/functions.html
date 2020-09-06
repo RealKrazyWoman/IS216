@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Functions</title>
+
+    <script src="js/foo.js"></script>
+
+    <script>
+        // Above
+        //      Functions where each function takes care of a business logic
+        //
+        // Separation of Concerns
+        //
+        // Below
+        //      Do things that concern this page
+        //      e.g. prompting the user to key in 2 numbers
+
+        var num1 = prompt("Enter first number"); // String
+        var num2 = prompt("Enter second number"); // String
+
+        num1 = Number(num1);
+        num2 = Number(num2);
+
+        var answer = foo(num1, num2);
+
+        alert("Multiplication result: " + answer);
+
+        
+        // Test Case 1
+        // num1: 5, num2: 1
+        // answer: 15
+
+        // Test Case 2
+        // num1: 5, num2: 2
+        // answer: 60
+    
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

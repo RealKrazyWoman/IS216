@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Accessing HTML (class)</title>
+
+    <style>
+        .korean {
+            width: 70%;
+            border: 5px solid blue;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .japanese {
+            margin:  auto;
+            margin-top: 15px;
+            border: 3px solid green;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 class="korean">
+        Want some Korean food? Let's go to Tanjong Pagar!
+    </h1>
+
+    <p class="korean">
+        Korean food is soooo yummy. Umm Umm late night ramen with kimchi...
+    </p>
+
+    <div class="korean">
+        <p>
+            KBBQ tonight
+        </p>
+    </div>
+
+    <div class="japanese">
+        <div>
+            <p class="korean">
+                Japanese-Korean fushion yummy
+            </p>
+        </div>
+    </div>
+    
+    <!-- JavaScript below -->
+    <script>
+
+        //======= Access all elements with class 'korean' =======
+        console.log("=============== class 'korean' ===============");       
+        var nodes = document.getElementsByClassName("korean") // NodeList object
+        console.log(nodes);
+
+        // Loop through & show attributes
+        console.log("============ Loop through NodeList ============");
+        var counter = 0;
+        for(node of nodes) { // node is an Element node
+            counter++;
+
+            console.log("##### Node (" + counter + ") #####");
+            console.log(node);
+
+            console.log("##### Node's innerHTML #####");
+            console.log(node.innerHTML);
+
+            console.log("##### Node's innerText #####");
+            console.log(node.innerText);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Accessing HTML (click)</title>
+    
+    <script>
+
+        function hi() {
+            alert('Hi there!');
+            alert('Hi again!'); 
+            var x = 7; 
+            alert(x);
+        }
+
+        function click_h1() {
+            // Retrieve all h1 elements
+            // Output to console
+            // Alert each h1 text 
+
+            var nodes = document.getElementsByTagName("h1");
+
+            for(node of nodes) {
+                console.log(node.innerText);
+                alert(node.innerText);
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <p id="kim">
+        Kim Possible paragraph
+    </p>
+
+    <h1>Hello World!!!</h1>
+    <h1>Save the World!!!</h1>
+
+    <!-- Add an event to this button -->
+    <button onClick="alert('Hi there!')">
+        Say Hi
+    </button>
+
+    <br><br>
+    <button onClick="hi()">
+        Say Hi Again
+    </button>
+
+    <br><br>
+    <button onClick="click_h1()">
+        Click to see all h1
+    </button>
+
+</body>
+</html>

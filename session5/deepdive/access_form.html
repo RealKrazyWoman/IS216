@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Accessing HTML (form)</title>
+
+    <style>
+        div {
+            width: 80%;
+            border: 5px solid pink;
+            margin: auto;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form name="some_form" id="love_form" action="#">
+        <label>Fullname</label>
+        <input type="text" name="fullname">
+
+        <br>
+        <label>Country</label>
+        <input type="text" name="country">
+
+        <br>
+        <label>Love Letter</label>
+        <br>
+        <textarea name="letter"></textarea>
+
+        <br>
+        <input type="submit" value="Send My Love">
+
+    </form>
+    
+    <!-- JavaScript below -->
+    <script>
+
+        console.log("=========== Accessing Form - Method #1 ===========");
+        var some_form = document.forms["some_form"];
+        console.log(some_form);
+
+        console.log("=========== Accessing Form - Method #2 ===========");
+        var love_form = document.getElementById("love_form");
+        console.log(love_form);
+
+        console.log("=========== What's inside the form? Element objects... ===========");
+        // form is a collection of Element objects
+        for(var i = 0; i < love_form.length; i++) {
+            console.log( love_form[i] );
+        }
+
+    </script>
+
+</body>
+</html>

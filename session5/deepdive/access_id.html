@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Accessing HTML (id)</title>
+
+    <style>
+        div {
+            width: 80%;
+            border: 5px solid pink;
+            margin: auto;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p id="justin">
+        Hello Justin
+    </p>
+
+    <p id="selena">
+        Hello <span style="color: blue;">Selena</span>
+    </p>
+
+    <div>
+        <p id="demi">
+            Hello
+                <span style="color: red;">
+                    Demi
+                </span>
+        </p>
+    </div>
+
+    <!-- My JavaScript code goes below -->
+    <script>
+        var justin = document.getElementById("justin"); // Element object (if found)
+        var selena = document.getElementById("selena"); // Element object (if found)
+        var demi = document.getElementById("demi"); // Element object (if found)
+
+        console.log(justin);
+        console.log(selena);
+        console.log(demi);
+
+
+        // Justin
+        console.log("##### Node's innerHTML #####");
+        console.log( justin.innerHTML );
+
+        console.log("##### Node's innerText #####");
+        console.log( justin.innerText );
+
+        // Selena
+        console.log("##### Node's innerHTML #####");
+        console.log( selena.innerHTML );
+
+        console.log("##### Node's innerText #####");
+        console.log( selena.innerText );
+
+        // Demi
+        console.log("##### Node's innerHTML #####");
+        console.log( demi.innerHTML );
+
+        console.log("##### Node's innerText #####");
+        console.log( demi.innerText );
+        
+
+    </script>
+    
+</body>
+</html>

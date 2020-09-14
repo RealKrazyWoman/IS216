@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Accessing HTML (attributes)</title>
+
+</head>
+<body>
+
+    <p id="kim" class="bye">
+        Kim Possible paragraph!
+    </p>
+
+    <p id="mission" class="hello" style="color: blue;">
+        Mission Impossible paragraph!
+    </p>
+
+    <p>
+        <a id="cnn" class="hello" href="http://cnn.com" target="_blank">Link to CNN</a>
+    </p>
+
+    <p>
+        <a id="smu" class="bye" href="http://smu.edu.sg" target="_blank">Link to SMU</a>
+    </p>
+
+    <hr>
+
+    <button onClick="show_kim()">
+        Show element with id 'kim' AND attributes
+    </button>
+
+    <br><br>
+
+    <button onClick="show_all()">
+        Show all elements with class 'hello' AND attributes
+    </button>
+
+    <br><br>
+
+    <button onClick="show_all_links()">
+        Show all links (anchor tags) AND href attribute values
+    </button>
+
+    
+    <!-- JavaScript below -->
+    <script>
+
+        function show_kim() {
+            // Retrieve all elements with class 'hello'
+            console.log("======== Retrieve an element with id 'kim' ========");
+            var node = document.getElementById("kim"); // Element object
+
+            // Loop through & show attributes
+            console.log("============ Retrieve attributes ============");
+
+            console.log("##### Node #####");
+            console.log(node);
+
+            console.log("##### Node's innerHTML #####");
+            console.log(node.innerHTML);
+
+            console.log("##### Node's innerText #####");
+            console.log(node.innerText);
+
+            console.log("##### Node's Attributes #####");
+            var attributes = node.getAttributeNames();
+            console.log(attributes);
+        }
+
+        function show_all() {
+            // Retrieve all elements with class 'hello'
+            console.log("======== Retrieve all elements with class 'hello' ========");
+            var nodes = document.getElementsByClassName("hello");
+            console.log(nodes);
+
+            // Loop through & show attributes
+            console.log("============ Retrieve attributes ============");
+            var counter = 0;
+            for(node of nodes) {
+                counter++;
+
+                console.log("##### Node (" + counter + ") #####");
+                console.log(node);
+
+                console.log("##### Node's innerHTML #####");
+                console.log(node.innerHTML);
+
+                console.log("##### Node's innerText #####");
+                console.log(node.innerText);
+
+                console.log("##### Node's Attributes #####");
+                var attributes = node.getAttributeNames();
+                console.log(attributes);
+            }
+        }
+
+        function show_all_links() {
+            // Retrieve all <a> tags
+            console.log("======== Retrieve all <a> tags ========");
+            var nodes = document.getElementsByTagName("a");
+            console.log(nodes);
+
+            // Loop through & show attributes
+            console.log("============ Retrieve attributes ============");
+            var counter = 0;
+            for(node of nodes) { // Element object
+                counter++;
+
+                console.log("##### Node (" + counter + ") #####");
+                console.log(node);
+
+                console.log("##### Node's innerHTML #####");
+                console.log(node.innerHTML);
+
+                console.log("##### Node's innerText #####");
+                console.log(node.innerText);
+
+                console.log("##### Node's Attributes #####");
+                var attributes = node.getAttributeNames();
+                console.log(attributes);
+
+                console.log("##### Node's href attribute & its value #####");
+                var attribute_node = node.getAttributeNode("href"); // AttributeNode object
+                console.log(attribute_node); // object
+                console.log(attribute_node.value); // The link URL (value)
+                
+                console.log( node.getAttribute("href") ); // value of attribute
+            }
+        }
+
+    </script>
+
+</body>
+</html>

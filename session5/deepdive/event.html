@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Event Handling</title>
+</head>
+<!-- Step 2
+     - Web browser will execute onLoad script
+-->
+<body onLoad="lol()">
+
+    <!-- Step 1
+         - Web browser will load all content inside <body> section FIRST
+           (text, images, css, javascript) -->
+
+    <!-- Add an onClick event -->
+    <img src="images/kim.png" onClick="foo()">
+
+    <p id="message">
+        
+    </p>
+
+
+
+    <hr>
+    <!-- 'this' refers to the current <div> element -->
+    <div onMouseOver="mOver(this)" onMouseOut="mOut(this)">
+        Mouse Over Me
+    </div>
+
+
+    
+    <hr>
+    <form name="some_form">
+        Enter your country:
+        <input type="text" name="country">
+
+        <br>
+        Enter your name:
+        <input type="text" name="name" onFocus="kungfu(this)">
+        <!-- this refers to the 'name' input element -->
+        <!-- onfocus: input, select, a -->
+    </form>
+
+
+
+    <hr>
+    <h2 onMouseOver="style.color = 'red'" onMouseOut="style.color = 'black'">
+        Mouse over this text (text color will change)
+    </h2>
+
+
+    <hr>
+    <h2 id="meow">
+        Mouse over this text (text color will change)
+    </h2>
+
+
+    <hr>
+    <img id="myMan" src="images/dwayne.jpg">
+
+
+    <script>
+        function lol() {
+            alert('Hello Oppa');
+        }
+
+        function foo() {
+
+            var message = prompt("Enter a greeting message");
+
+            document.getElementById("message").innerText = message;
+        }
+
+        function mOver(obj) {
+            obj.innerHTML = "Hello Justin";
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Bye Justin";
+        }
+
+        function kungfu(obj) {
+            obj.style.background = "yellow";
+        }
+
+
+        var meow = document.getElementById("meow");
+
+        meow.addEventListener("mouseover", mOverAgain);
+        meow.addEventListener("mouseout", mOutAgain);
+
+
+        function mOverAgain() {
+            meow.style.color = 'red';
+        }
+
+        function mOutAgain() {
+            meow.style.color = 'black';
+        }
+
+
+        var myManImage = document.getElementById("myMan");
+        myManImage.addEventListener("click", changeImageClick);
+        myManImage.addEventListener("mouseover", changeImageMouseOver);
+
+        function changeImageClick() {
+            myManImage.src = "images/hugh.jpg"
+        }
+
+        function changeImageMouseOver() {
+            myManImage.src = "images/kevin.jpg"
+        }
+
+    </script>
+
+</body>
+</html>

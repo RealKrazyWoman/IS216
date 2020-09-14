@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Changing HTML (add/delete elements)</title>
+</head>
+<body>
+
+    <div id="main" style="width: 300px; border: 5px solid pink;">
+        <p id="para1">1st parargraph</p>
+        <p id="para2">2nd parargraph</p>
+    </div>
+    
+    <ul id="stars">
+        <li>Kevin</li>
+        <li>Hugh</li>
+    </ul>
+
+
+    <hr>
+
+    <button onClick="add_paragraph()">
+        Add a <b>new paragraph</b> (at the end)
+    </button>
+
+    <br><br>
+    <button onClick="add_star()">
+        Add a <b>new star</b> to a list (at the end)
+    </button>
+
+    <br><br>
+    <button onClick="add_star_top()">
+        Add a <b>new star</b> to a list (at the top)
+    </button>
+
+    <br><br>
+    <button onClick="remove_star_bottom()">
+        Remove the <b>last item</b> in the stars list
+    </button>
+
+    <br><br>
+    <button onClick="remove_star_top()">
+        Remove the <b>first item</b> in the stars list
+    </button>
+
+    <br><br>
+    <button onClick="remove_list()">
+        Remove the entire list
+    </button>
+    
+
+    <script>
+
+        function add_paragraph() {
+            var text = prompt("Enter a new paragraph");
+
+            var para = document.createElement("p"); // a new <p> element
+            var node = document.createTextNode(text); // text node
+            para.appendChild(node); // append the text node to <p>
+
+            document.getElementById("main").appendChild(para);
+        }
+
+        function add_star() {
+            var text = prompt("Enter a new star");
+
+            var list = document.createElement("li"); // a new <li> element
+            var node = document.createTextNode(text); // text node
+            list.appendChild(node); // append the text node to <li>
+
+            document.getElementById("stars").appendChild(list);
+        }
+
+        function add_star_top() {
+            var text = prompt("Enter a new star");
+
+            var list = document.createElement("li"); // a new <li> element
+            var node = document.createTextNode(text); // text node
+            list.appendChild(node); // append the text node to <li>
+
+            var stars_list = document.getElementById("stars");
+            // Insert the new <li> before the first child of <ul>
+            stars_list.insertBefore(list, stars_list.childNodes[0]);
+        }
+
+        function remove_star_bottom() {
+            var stars_list = document.getElementById("stars");
+            stars_list.removeChild(stars_list.lastElementChild);
+        }
+
+        function remove_star_top() {
+            var stars_list = document.getElementById("stars");
+            stars_list.children[0].remove();
+        }
+
+        function remove_list() {
+
+            document.getElementById("stars").remove();
+        }
+
+    </script>
+
+</body>
+</html>

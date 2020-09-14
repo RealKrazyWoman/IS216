@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Changing HTML (existing elements)</title>
+</head>
+<body>
+    
+    <h1 id="greet" style="color: green">Hi! This is the original greeting!</h1>
+
+    <p>
+        <a id="mylink" href="http://cnn.com" target="_blank">Go to CNN</a>
+    </p>
+
+    <div id="main">
+        <h2 style="color: purple">
+            I am a purple h2 heading inside div
+        </h2>
+    </div>
+
+    <div>
+        <table border='0'>
+            <tr>
+                <td>
+                    <img id="photo1" src="images/placeholder.jpg">
+                </td>
+                <td>
+                    <img id="photo2" src="images/placeholder.jpg">
+                </td>
+                <td>
+                    <img id="photo3" src="images/placeholder.jpg">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+    
+    <button onClick="change_greeting()">
+        Change <b>h1</b> text
+    </button>
+
+    <br><br>
+    <button onClick="reset_greeting()">
+        Reset <b>h1</b> text
+    </button>
+
+    <br><br>
+    <button onClick="change_greeting_color()">
+        Change <b>h1</b> color
+    </button>
+
+    <br><br>
+    <button onClick="reset_greeting_color()">
+        Reset <b>h1</b> color
+    </button>
+
+    <br><br>
+    <button onClick="change_link_method1()">
+        Change anchor tag <b>href</b> and <b>text</b> (Method 1)
+    </button>
+
+    <br><br>
+    <button onClick="change_link_method2()">
+        Change anchor tag <b>href</b> and <b>text</b> (Method 2)
+    </button>
+
+    <br><br>
+    <button onClick="change_div_innerHTML()">
+        Change <b>div</b>'s <b>innerHTML</b>
+    </button>
+
+    <br><br>
+    <button onClick="show_male()">
+        Show me <b>male</b> stars
+    </button>
+
+    <br><br>
+    <button onClick="show_female()">
+        Show me <b>female</b> stars
+    </button>
+
+
+    <script>
+
+        function change_greeting() {
+            var node = document.getElementById("greet");
+            node.innerText = "Hello! This is a new greeting message!";
+        }
+
+        function reset_greeting() {
+            var node = document.getElementById("greet");
+            node.innerText = "Hi! This is the original greeting!";
+        }
+
+        function change_greeting_color() {
+            document.getElementById("greet").style.color = "red";
+        }
+
+        function reset_greeting_color() {
+            document.getElementById("greet").style.color = "green";
+        }
+
+        function change_link_method1() {
+            var new_url = prompt("Enter full URL");
+            var new_text = prompt("Enter link text");
+
+            var node = document.getElementById("mylink");
+            node.innerText = new_text;
+            node.getAttributeNode("href").value = new_url;
+        }
+
+        function change_link_method2() {
+            var new_url = prompt("Enter full URL");
+            var new_text = prompt("Enter link text");
+
+            var node = document.getElementById("mylink");
+            node.innerText = new_text;
+            node.setAttribute("href", new_url);
+        }
+
+        function change_div_innerHTML() {
+            var node = document.getElementById("main");
+            node.innerHTML = "<h2 style='color: red'>I am a red h2 heading inside div</h2>";
+        }
+
+        function show_male() {
+            document.getElementById("photo1").setAttribute("src", "images/kevin.jpg");
+            document.getElementById("photo2").setAttribute("src", "images/hugh.jpg");
+            document.getElementById("photo3").setAttribute("src", "images/dwayne.jpg");
+        }
+
+        function show_female() {
+            document.getElementById("photo1").setAttribute("src", "images/emily.jpg");
+            document.getElementById("photo2").setAttribute("src", "images/chloe.jpg");
+            document.getElementById("photo3").setAttribute("src", "images/emma.jpg");
+        }
+
+    </script>
+
+</body>
+</html>

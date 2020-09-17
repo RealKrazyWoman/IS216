@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 8</title>
+
+    <style>
+        td.female {
+            background-color: pink;
+        }
+
+        td.male {
+            background-color: aqua;
+        }
+
+        td.rich {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+
+    <script>
+
+        // Given this multi-dimensional array
+        // (Do NOT modify this variable)
+        var friends = [
+            [ "Rachel Green", "Female", 'Marketing Executive', 50000 ],
+            [ "Monica Geller", "Female", 'Chef', 70000 ],
+            [ "Phoebe Buffay", "Female", 'Cat Whisperer', 30000 ],
+            [ "Chandler Bing", "Male", 'Analyst', 60000 ],
+            [ "Joey Tribbiani", "Male", 'Actor', 40000 ],
+            [ "Ross Geller", "Male", 'Lecturer', 70000 ],
+        ];
+
+        // Given this template table_data String
+        var table_data = " \
+            <table border='1' style='text-align: center'> \
+                <tr> \
+                    <th>Name</th> \
+                    <th>Gender</th> \
+                    <th>Job</th> \
+                    <th>Annual Salary (USD)</th> \
+                </tr> \
+        ";
+
+        // Loop through friends Array and populate table_data
+        // with 6 Friends cast members' data
+        // - 1 row for 1 cast member
+        // HINT: You need to APPEND additional HTML to table_data
+        for( friend_array of friends ) {
+            table_data += "<tr>";
+
+            var counter = 0;
+            for( item of friend_array ) {
+
+                if( counter == 1 ) {
+                    var class_value = 'female';
+                    if( item == 'Male' ) {
+                        class_value = 'male';
+                    }
+                    table_data += "<td class='" + class_value + "'>" + item + "</td>";
+                }
+                else if( counter == 3 ) {
+                    var class_value = '';
+                    if( item > 50000 ) {
+                        class_value = 'rich';
+                    }
+                    table_data += "<td class='" + class_value + "'>" + item + "</td>";
+                }
+                else {
+                    table_data += "<td>" + item + "</td>";
+                }
+
+                counter++;
+            }
+
+            table_data += "</tr>";
+        }
+
+        // Once table_data is completed
+        // It will be used by JavaScript code below (inside body)
+
+    </script>
+
+</head>
+<body>
+
+    <div id='summary'>
+        
+    </div>
+
+    <!-- Do NOT modify the below JavaScript -->
+    <script>
+        document.getElementById("summary").innerHTML = table_data;
+    </script>
+    <!-- Do NOT modify the above JavaScript -->
+    
+</body>
+</html>

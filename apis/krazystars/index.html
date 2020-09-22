@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>KrazyStars API Documentation</title>
+</head>
+<body>
+
+    <h1>KrazyStars API v1.0 - Documentation</h1>
+    
+    <hr>
+    
+    
+    <h2>read</h2>
+    <p>
+        <b>Description</b>
+        <br>
+        Returns a collection of stars in JSON format.
+    </p>
+    <p>
+        <b>HTTP request</b>
+        <br>
+        <font face="Courier New" color="blue">GET http://krazywoman.com/krazystars/api/star/read.php</font>
+    </p>
+    
+    <hr>
+    
+    <h2>search</h2>
+    <p>
+        <b>Description</b>
+        <br>
+        Returns a collection of stars matching the search query in JSON format.
+    </p>
+    <p>
+        <b>HTTP request</b>
+        <ul>
+            <li>
+                Search all stars whose gender is <b>female</b>
+                <br>
+                <font face="Courier New" color="blue">GET http://krazywoman.com/krazystars/api/star/search.php?g=f</font>
+                <br>
+                where <b>g</b> is the <b>gender</b> parameter, and<br>
+                f (or F) indicates female<br>
+                m (or M) indicates male
+            </li>
+            
+            <br>
+            
+            <li>
+                Search all stars whose name contains <b>substring</b>
+                <br>
+                <font face="Courier New" color="blue">GET http://krazywoman.com/krazystars/api/star/search.php?n=emm</font>
+                <br>
+                where <b>n</b> is the <b>name</b> parameter, and<br>
+                emm is the substring<br>
+                The above GET request will return Emma Watson and Emma Stone.
+            </li>
+            
+            <br>
+            
+            <li>
+                Search all stars whose name contains <b>substring</b> AND gender is female/male
+                <br>
+                <font face="Courier New" color="blue">GET http://krazywoman.com/krazystars/api/star/search.php?n=ry&g=m</font>
+                <br>
+                where <b>n</b> is the <b>name</b> parameter, and ry is the substring<br>
+                <b>AND</b> <b>g</b> is the <b>gender</b> parameter, and m (or M) indicates male
+                The above GET request will return Ryan Gosling and Henry Cavill.
+            </li>
+        </ul>
+    </p>
+    
+    <hr>
+    
+    <footer>&copy; Copyright 2020 Krazy Woman</footer>
+</body>
+</html>

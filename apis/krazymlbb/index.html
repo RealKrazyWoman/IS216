@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>KrazyMLBB API Documentation</title>
+</head>
+<body>
+
+    <h1>KrazyMLBB API v1.0 - Documentation</h1>
+    
+    <hr>
+    
+    
+    <h2>read all</h2>
+    <p>
+        <b>Description</b>
+        <br>
+        Returns a collection of MLBB heroes in JSON format.
+    </p>
+    <p>
+        <b>HTTP request</b>
+        <br>
+        <font face="Courier New" color="blue">GET http://krazywoman.com/krazymlbb/api/hero/read.php</font>
+    </p>
+    
+    <hr>
+    
+    <h2>read one</h2>
+    <p>
+        <b>Description</b>
+        <br>
+        Given an ID value, returns an MLBB hero in JSON format.
+    </p>
+    <p>
+        <b>HTTP request</b>
+        <br>
+        <font face="Courier New" color="blue">GET http://krazywoman.com/krazymlbb/api/hero/read_one.php?id=19</font>
+        <br>
+        where <b>id</b> is the <b>id</b> parameter, and<br>
+        19 is the id value.
+    </p>
+    
+    <hr>
+    
+    <h2>read by page</h2>
+    <p>
+        <b>Description</b>
+        <br>
+        Returns a collection of MLBB heroes in JSON format - by page.
+        <br>
+        Each page displays <b>5 heroes</b> at a time.
+        <br>
+        e.g. Page 1 displays heroes with id between 1 and 5, page 2 displays heroes with id between 6 and 10, and so on.
+    </p>
+    <p>
+        <b>HTTP request</b>
+        
+        <font face="Courier New" color="blue">GET http://krazywoman.com/krazystars/api/star/read_paging.php?page=3</font>
+    </p>
+    
+    <hr>
+    
+    <h2>search</h2>
+    <p>
+        <b>Description</b>
+        <br>
+        Returns a collection of MLBB heroes of a certain <b>class</b> in JSON format.
+    </p>
+    <p>
+        <b>HTTP request</b>
+        <br>
+        <font face="Courier New" color="blue">GET http://krazywoman.com/krazymlbb/api/hero/search.php?c=mage</font>
+        <br>
+        where <b>c</b> is the <b>class</b> parameter, and<br>
+        mage is the value <i>(e.g. mage, fighter, support, tank, assassin, marksman)</i>.
+        
+    </p>
+    
+    <hr>
+    
+    <footer>&copy; Copyright 2020 Krazy Woman</footer>
+</body>
+</html>

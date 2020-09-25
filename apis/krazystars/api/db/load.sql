@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS krazystars;
-use krazystars;
-DROP TABLE IF EXISTS star;
+create database if not exists krazystars;
 
-CREATE TABLE `star` (
+use krazystars;
+
+CREATE TABLE if not exists `star` (
   `id` int(11) NOT NULL,
   `gender` varchar(1) NOT NULL,
   `fullname` varchar(256) NOT NULL,

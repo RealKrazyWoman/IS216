@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS krazymlbb;
-use krazymlbb;
-DROP TABLE IF EXISTS hero;
+create database if not exists krazymlbb;
 
-CREATE TABLE `hero` (
+use krazymlbb;
+
+CREATE TABLE if not exists `hero` (
   `id` int(11) NOT NULL,
   `name` varchar(256) NOT NULL,
   `class` varchar(256) NOT NULL,

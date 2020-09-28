@@ -1,0 +1,245 @@
+<html>
+<head>
+    <title>Your Name Goes Here - Challenge 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Internal CSS styling -->
+    <style>
+
+        /* DO NOT MODIFY THIS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add your CSS script below */
+        div {
+            margin: 20px auto auto auto;
+            max-width: 90%;
+        }
+
+        body {
+            background-image: url(images/justin_bg.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: beige;
+        }
+
+        .header-box {
+            background-color: black;
+            color: white;
+            padding: 10px 20px 20px 5px;
+            border: 5px solid blue;
+            border-top: dotted;
+            border-bottom: dotted;
+        }
+
+        .header-box > h1 {
+            text-decoration: underline;
+            word-spacing: 2em;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            font-style: italic;
+            font-family: sans-serif;
+        }
+
+        .middle-box {
+            background-color: yellow;
+            border: 5px dotted red;
+            padding: 10px;
+            font-family: sans-serif;
+        }
+
+        .middle-box > h1 {
+            background-color: pink;
+            border: 1px dotted black;
+            padding: 10px;
+            text-align: center;
+            margin: auto auto 10px auto;
+            width: 50%;
+            
+        }
+
+        .middle-box > p {
+            line-height: 1.6;
+        }
+
+        p:nth-child(3) {
+            background-color: aqua;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .middle-box > p > a {
+            color: brown;
+            text-decoration: none;
+        }
+
+        .bottom-box {
+            border: 1px solid;
+            border-radius: 30px;
+            background-color: rgb(7, 192, 77);
+            padding: 17px;
+        }
+
+        .bottom-box > h2 {
+            text-align: center;
+        }
+
+        .bottom-box > ul {
+            list-style-image: url(images/justin_list_button.png);
+            padding: 5px;
+            list-style-position: inside;
+        }
+
+        .bottom-box > ul > li {
+            border-bottom-style: solid;
+            color: black;
+            font-family: sans-serif;
+        }
+
+        .bottom-box ul li{
+            border-bottom: 1px dotted black;
+        }
+
+        li:nth-child() {
+            color: red;
+            margin: 0 auto;
+            margin: 50%;
+            margin: 0 0 0 0;
+        }
+
+        .love-box {
+            border: 3px solid purple;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        .love-box > h2 {
+            background-color: pink;
+            border: 2px dotted red;
+            text-align: center;
+        }
+
+        input[type=text] {
+            width: 60%;
+            padding: 10px;
+        }
+
+        textarea {
+            width: 60%;
+            padding: 10px;
+        }
+
+        input[type=submit] {
+            background-color: black;
+            color: white;
+            width: 120px;
+            padding: 10px;
+            margin: 20px auto auto 0px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .footer-box {
+            background-color: grey;
+            width: 100%;
+            color: white; 
+            text-align: center;
+        }
+
+        .form-field{
+            position: relative;
+            left: -5%;
+        }
+        
+
+        .redtxt{
+            color: red;
+            text-decoration: line-through;
+        }
+
+        .bluetxt{
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!--
+        DO NOT MODIFY the baseline HTML script given to you!
+        For example,
+        - Do NOT change 'class' names
+        - Do NOT change the HTML structure (don't shift elements around)
+    -->
+
+    <div class="outer-box">
+
+        <div class="header-box">
+            <h1>Justin Bieber</h1>
+            <p>
+                Justin Drew Bieber is a Canadian singer and songwriter. Discovered at age 13 by talent manager Scooter Braun after he had watched his YouTube cover song videos, Bieber was signed to RBMG Records in 2008. 
+            </p>
+        </div>
+
+
+        <div class="middle-box">
+            <h1>Early Life</h1>
+            <p>
+                Bieber was born on March 1, 1994, in London, Ontario, at St Joseph's Hospital, and was raised in Stratford, Ontario. He is the only child of Jeremy Jack Bieber and Pattie Mallette, who were never married. Mallette's mother Diane and stepfather Bruce helped her raise her son. Bieber's ancestry includes French-Canadian, Irish, English, Scottish, and German.
+            </p>
+
+            <p>
+                For more information, visit <a href="https://en.wikipedia.org/wiki/Justin_Bieber" target="_blank">this Wiki page</a> and read!
+            </p>
+        </div>
+
+        <div class="bottom-box">
+            <h2>Describe Justin</h2>
+            <ul>
+                <li>Talented</li>
+                <li>Handsome</li>
+                <li>He is <span class="redtxt">single</span> <span class="bluetxt">married</span></li>
+            </ul>
+        </div>
+
+        <div class="love-box">
+            <h2>Send My Love</h2>
+            
+            <form>
+
+                <div class="form-field">
+                    <label>Name: </label>
+                    <input type="text" name="myname">
+                </div>
+
+                <div class="form-field">
+                    <label>Email: </label>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="form-field">
+                    <label>Love Letter:</label>
+                    <textarea name="loveletter"></textarea>
+                </div>
+
+                <input type="submit" class="button" value="Send My Love">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-box">
+        <p>
+            Copyright &copy; 2020 Your Name Goes Here
+        </p>
+    </div>
+    
+</body>
+</html>

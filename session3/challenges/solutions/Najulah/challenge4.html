@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Challenge 4 - Joe Profile</title>
+
+  <!-- How do we refer to Bootstrap CDN? 
+        Go to Bootstrap 4 website: https://getbootstrap.com/
+        And go to Get Started
+        Get "Starter template" code!
+    -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .namebox>span:nth-child(2) {
+      margin: 0 auto;
+      /* padding-left: 8%; */
+    }
+
+    .skills {
+      /* border: 1px solid red; */
+      margin: 0% 0 5% 0;
+    }
+
+    .bar {
+      margin: 0;
+      padding: 0;
+      border-radius: 25px;
+      height: 5px;
+    }
+
+    .bar>div {
+      border-radius: 25px;
+      height: 5px;
+    }
+
+    .namebox{
+      /* border: 1px solid red; */
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="images/henry.jpg" style="width: 100%">
+        <br>
+
+        <div class="namebox clearfix">
+          <span class="font-weight-bold h3 text-secondary d-inline float-left">Joe Fox</span>
+
+          <span class="text-secondary d-inline float-right">
+            Follow on:
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin-square"></i>
+          </span>
+        </div>
+
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">Profession:</th>
+              <td>Programmer</td>
+            </tr>
+            <tr>
+              <th scope="row">Experience:</th>
+              <td>10 Years</td>
+            </tr>
+            <tr>
+              <th scope="row">Phone:</th>
+              <td>+1 612 555 1234</td>
+            </tr>
+            <tr>
+              <th scope="row">Email:</th>
+              <td>joe.fox@example.com</td>
+            </tr>
+            <tr>
+              <th scope="row">Location:</th>
+              <td>789 Sunshine Lane, St. Paul, Minnesota, USA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md text-secondary">
+        <br>
+        <span class="h4">Biography of Joe Fox</span>
+        <p>Nulla efficitur facilisis mollis. Aliquam ullamcorper mi felis, a semper turpis laoreet in. Nulla pharetra
+          nisl
+          at
+          purus pellentesque ultricies. Sed a augue condimentum, condimentum ex a, bibendum enim. Proin eget massa a
+          velit
+          congue interdum. Suspendisse a egestas nunc. In eu dignissim nulla, ut semper urna. Nulla ullamcorper sed est
+          quis
+          placerat. Aenean id sagittis lectus, consequat ultrices justo. Fusce venenatis lacinia ligula in scelerisque.
+          Proin
+          tincidunt diam at turpis condimentum interdum ac id magna. Sed malesuada nunc ut leo iaculis, vitae
+          consectetur
+          nulla consectetur. Curabitur gravida sapien sagittis congue mattis. Aenean hendrerit rhoncus magna in
+          hendrerit.
+        </p>
+
+
+        <br>
+        <span class="h4">Personal Experience</span>
+        <p>It is truly amazing the damage that we, as parents, can inflict on our children. So why do we do it? For the
+          most
+          part, we don’t do it intentionally or with malice. In the majority of cases, the cause is a well-meaning but
+          unskilled or un-thinking parent, who says the wrong thing at the wrong time, and the message sticks – as
+          simple as
+          that!</p>
+
+        <br>
+        <p class="h4">Skill</p>
+        <div class="row skills">
+          <span class="col-md-10">Look</span>
+          <span class="col-md-2">99%</span>
+          <div class="bar bg-dark col-12">
+            <div class="text-black bg-info col-md-11 text-info"></div>
+          </div>
+        </div>
+        <div class="row skills">
+          <span class="col-md-10">Education</span>
+          <span class="col-md">70%</span>
+          <div class="bar bg-dark col-12">
+            <div class="text-black bg-info col-md-7 text-info"></div>
+          </div>
+        </div>
+        <div class="row skills">
+          <span class="col-md-10">CSS</span>
+          <span class="col-md">50%</span>
+          <div class="bar bg-dark col-12">
+            <div class="text-black bg-info col-md-6 text-info"></div>
+          </div>
+        </div>
+        <div class="row skills">
+          <span class="col-md-10">JavaScript</span>
+          <span class="col-md">77%</span>
+          <div class="bar bg-dark col-12">
+            <div class="text-black bg-info col-md-8 text-info"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

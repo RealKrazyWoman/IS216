@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 8</title>
+
+    <style>
+        td.female {
+            background-color: pink;
+        }
+
+        td.male {
+            background-color: aqua;
+        }
+
+        td.rich {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+
+    <script>
+        // Given this multi-dimensional array
+        // (Do NOT modify this variable)
+        var friends = [
+            ["Rachel Green", "Female", 'Marketing Executive', 50000],
+            ["Monica Geller", "Female", 'Chef', 70000],
+            ["Phoebe Buffay", "Female", 'Cat Whisperer', 30000],
+            ["Chandler Bing", "Male", 'Analyst', 60000],
+            ["Joey Tribbiani", "Male", 'Actor', 40000],
+            ["Ross Geller", "Male", 'Lecturer', 70000],
+        ];
+
+        // Given this template table_data String
+        // version 1
+        // \ is used to improve readability
+        var table_data = " \
+            <table border='1' style='text-align: center'> \
+                <tr> \
+                    <th>Name</th> \
+                    <th>Gender</th> \
+                    <th>Job</th> \
+                    <th>Annual Salary (USD)</th> \
+                </tr> \
+        ";
+        // version 2
+        // without \ in version 1, the table_data has to be written in 1 line
+        var table_data =
+            " <table border='1' style='text-align: center'>  <tr>  <th>Name</th>   <th>Gender</th>  <th>Job</th>  <th>Annual Salary (USD)</th> </tr> ";
+
+        // version 3
+        // similar to version 1, but using `` to format your string, without the \
+        var table_data = `
+            <table border='1' style='text-align: center'> 
+                <tr> 
+                    <th>Name</th> 
+                    <th>Gender</th> 
+                    <th>Job</th> 
+                    <th>Annual Salary (USD)</th> 
+                </tr>
+            `
+
+
+        // Loop through friends Array and populate table_data
+        // with 6 Friends cast members' data
+        // - 1 row for 1 cast member
+        //
+        // Apply CSS styling: 
+        //      Gender
+        //          If "Female", apply td.female
+        //          If "Male", apply td.male
+        //      Annual Salary (USD)
+        //          If salary > 50000, apply td.rich
+        //          Else no need to apply any styling
+        //
+        // HINT: Re-use your Challenge 7 code
+        for (p of friends) {
+            table_data += "<tr>";
+            // let gender = p[1] == "Male"?"male"
+            // console.log(p[1].toLowerCase());
+            let status = p[3] > 50000 ? "rich" : "";
+            table_data += "<td>" + p[0] + "</td>";
+            table_data += "<td class='" + p[1].toLowerCase() + "'>" + p[1] + "</td>";
+            table_data += "<td>" + p[2] + "</td>";
+            table_data += "<td class='" + status + "'>" + p[3] + "</td>";
+            table_data += "</tr>";
+        }
+
+
+        // Once table_data is completed
+        // It will be used by JavaScript code below (inside body)
+    </script>
+
+</head>
+
+<body>
+
+    <div id='summary'>
+
+    </div>
+
+    <!-- Do NOT modify the below JavaScript -->
+    <script>
+        document.getElementById("summary").innerHTML = table_data;
+    </script>
+    <!-- Do NOT modify the above JavaScript -->
+
+</body>
+
+</html>

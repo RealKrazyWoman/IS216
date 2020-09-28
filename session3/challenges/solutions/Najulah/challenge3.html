@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Challenge 3 - Friends Fan Page</title>
+
+    <!-- How do we refer to Bootstrap CDN? 
+        Go to Bootstrap 4 website: https://getbootstrap.com/
+        And go to Get Started
+        Get "Starter template" code!
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<style>
+    /* #navbarNavAltMarkup {
+        padding-left: 19%;
+
+    } */
+
+    form {
+        padding: 5%;
+    }
+
+    /* nav > a{
+        border: 1px solid red;
+    }
+
+    nav > div{
+        border: 1px solid red;
+    } */
+</style>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-right navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand col-3" href="#">
+            <img src="images/friends.jpg" width="50%" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-2">
+                <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Videos</a>
+                <a class="nav-link" href="#">Photos</a>
+                <a class="nav-link" href="#" aria-disabled="true">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Introduction -->
+    <div class="container">
+        <h1 class="text-center display-3">Introduction</h1>
+        <p class="lead">Friends is an American television sitcom, created by David Crane and Marta Kauffman, which aired
+            on NBC from
+            September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston,
+            Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six
+            friends in their 20s and 30s who live in Manhattan, New York City. The series was produced by
+            Bright/Kauffman/Crane Productions, in association with Warner Bros. Television. The original executive
+            producers
+            were Kevin S. Bright, Kauffman, and Crane.</p>
+
+        <!-- Meet the Cast, 6 cards -->
+        <h1 class="text-center display-3">Meet the cast</h1>
+        <div class="row ">
+            <div class="col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/rachel.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Rachel</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/monica.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Monica</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/phoebe.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Phoebe</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/chandler.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chandler</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/joey.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Joey</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/ross.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ross</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>>
+
+
+    <!-- Form -->
+    <form class="text-white bg-dark">
+        <div class="container">
+            <h1 class="text-center display-3">Write to Friends cast</h1>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Country">Country</label>
+                    <input type="text" class="form-control" id="Country">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input type="text" class="form-control" id="Username" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="Username">Who is your favourite member?</label>
+                <input type="text" class="form-control" id="Username" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-block btn-lg btn-danger">Send Letter to the Cast</button>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+</script>
+
+</html>

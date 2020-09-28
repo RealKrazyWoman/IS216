@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Challenge 5 - Joe Resume</title>
+
+    <!-- How do we refer to Bootstrap CDN? 
+        Go to Bootstrap 4 website: https://getbootstrap.com/
+        And go to Get Started
+        Get "Starter template" code!
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .fa {
+            color: turquoise;
+            border: 2px solid turquoise;
+            padding: 5px;
+            border-radius: 50%;
+            width: 30px;
+        }
+
+        .nobg {
+            border: none;
+        }
+
+        .fa-graduation-cap {
+            color: red;
+        }
+
+        .fa-diamond {
+            color: #ffd300;
+        }
+
+        .fa-file-o {
+            color: orange;
+        }
+
+        .text-orange {
+            color: orange;
+        }
+
+        .text-purple {
+            color: purple;
+        }
+
+        .text-pink {
+            color: deeppink;
+        }
+
+        .text-grey{
+            color: grey;
+        }
+
+        /* .card-body{
+            background: silver;
+        } */
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="container row mt-2">
+
+        <div class="d-inline col-md-4">
+            <div class="card bg-light">
+                <img src="images/henry.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title h4">Joe Fox</h5>
+                    <p class="card-text">I am open to new opportunities. I am available January 2021 onwards.</p>
+                    <div class="col-md-12">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google-plus"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                    <!-- <a href="#" class="btn btn-primary">More Info</a> -->
+                </div>
+            </div>
+        </div>
+
+        <div class=" d-inline col">
+            <h4 class="display-4 text-secondary font-weight-normal">Joe Fox</h4>
+            <p class="no-margin-bottom">Nulla efficitur facilisis mollis. Aliquam ullamcorper mi felis, a semper
+                turpis
+                laoreet
+                in. Nulla pharetra nisl at purus pellentesque ultricies. Sed a augue condimentum, condimentum ex a,
+                bibendum
+                enim. Proin eget massa a velit congue interdum. Suspendisse a egestas nunc. In eu dignissim nulla,
+                ut
+                semper
+                urna. Nulla ullamcorper sed est quis placerat. Aenean id sagittis lectus, consequat ultrices justo.
+                Fusce
+                venenatis lacinia ligula in scelerisque. Proin tincidunt diam at turpis condimentum interdum ac id
+                magna. Sed
+                malesuada nunc ut leo iaculis, vitae consectetur nulla consectetur. Curabitur gravida sapien
+                sagittis
+                congue
+                mattis. Aenean hendrerit rhoncus magna in hendrerit.
+            </p>
+
+            <table class="table table-hover">
+                <tbody>
+                <tr>
+                    <td class="text-danger font-weight-bold">
+                        <i class=' nobg fa fa-graduation-cap'></i>
+                        Degree
+                    </td>
+                    <td>Master's Degrees</td>
+                </tr>
+                <tr>
+                    <td class="text-warning font-weight-bold">
+                        <i class="nobg fa fa-diamond"></i>
+                        Exp.:
+                    </td>
+                    <td>10 Year in Technology</td>
+                </tr>
+                <tr>
+                    <td class="text-orange font-weight-bold">
+                        <i class="nobg fa fa-file-o"></i>
+                        Courses:
+                    </td>
+                    <td>Software, Hardware, Mathematics</td>
+                </tr>
+                <tr>
+                    <td class="text-success font-weight-bold ">
+                        <i class="material-icons">location_on</i>
+                        Address:
+                    </td>
+                    <td>789 Sunshine Lane, St. Paul, Minnesota, USA</td>
+                </tr>
+                <tr>
+                    <td class="text-purple font-weight-bold">
+                        <i class="material-icons">phone_iphone</i>
+                        Phone:
+                    </td>
+                    <td>+1 612 555 1234</td>
+                </tr>
+                <tr>
+                    <td class="text-pink font-weight-bold">
+                        <i class="material-icons ">email</i>
+                        Email:
+                    </td>
+                    <td><a href="#">joe.fox@example.com</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4 class="display-6 text-secondary font-weight-bold">Professional Skills</h4>
+
+            <div class="row font-weight-bold text-secondary">
+                <h6 class="col-md-11">Positive Behaviors</h6>
+                <span class="col-md-1">40%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="50"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="row font-weight-bold text-secondary mt-4">
+                <h6 class="col-md-11">Teamworking Abilities</h6>
+                <span class="col-md-1">50%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="row font-weight-bold text-secondary mt-4">
+                <h6 class="col-md-11">Time Management</h6>
+                <span class="col-md-1">60%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="50"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="row font-weight-bold text-secondary mt-4">
+                <h6 class="col-md-11">Excellent Communication</h6>
+                <span class="col-md-1">80%</span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="50"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+</script>
+
+</html>

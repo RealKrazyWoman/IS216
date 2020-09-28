@@ -1,0 +1,120 @@
+/* DO NOT MODIFY THE FIRST 2 LINES OF <body> declaration block.
+   You can ADD more CSS script below the 2 lines.
+*/
+body {
+    margin: 0;
+    padding: 0;
+    /* You can add more CSS script below */
+}
+
+
+
+/* Add your CSS script below */
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(255, 205, 253)
+}
+
+#main-header {
+    background-color: yellow;
+    padding-left: 40px;
+    border: 1px solid yellow;
+    margin: 0;
+}
+
+#main-header h1 {
+    color: blue;
+}
+
+#navigation-bar {
+    background: grey;
+    border: 1px solid grey;
+}
+
+
+li {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    /* font-weight: bold; */
+}
+
+
+#top-content {
+    background-color: #DD9658;
+    width: 100%;
+    border-top: 1px solid grey;
+    /* color: ; */
+}
+
+#top-content h1 {
+    font-size: 50px;
+    padding: 5%;
+    text-align: center;
+    color: white;
+    background-image: url(../images/hyunbin_bg.jpg);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 0%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+body>.box {
+    background-color: rgb(235, 204, 234);
+    height: 100%;
+    padding: 2% 5%;
+}
+
+#main-content,
+#side-bar {
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+#main-content {
+    width: 60%;
+}
+
+#side-bar {
+    background-color: green;
+    overflow: auto;
+    color: white;
+    padding: 0 1%;
+    width: 37%;
+}
+
+#main-footer {
+    text-align: center;
+    background-color: rgb(8, 5, 5);
+    color: white;
+    border: 1px solid rgb(8, 5, 5);
+}
+
+@media(max-width: 1280px) {
+    #top-content h1 {
+        width: inherit;
+    }
+}
+
+
+/* DO NOT MODIFY THIS */
+@media(max-width: 600px) {
+    #main-content {
+        width: 100%;
+        float: none;
+    }
+
+    #side-bar {
+        width: 100%;
+        float: none;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 9</title>
+
+    <script>
+
+        /*
+            Complete the below JavaScript function such that it:
+            1. Receives a string (str) as a parameter
+            2. Converts the first letter of each word of the string into upper-case
+
+            For example,
+                Given "the very cute puppy"
+                The function must return "The Very Cute Puppy"
+        */
+
+        function convert_first_letter(str) {
+            
+            // YOUR CODE GOES HERE
+            
+            var str_arr = str.split(" ");
+            var new_str = "";
+
+            for ( tmp_str of str_arr ){
+                console.log(tmp_str);
+                mod_str = tmp_str[0].toUpperCase() +  tmp_str.slice(1);
+                console.log(mod_str);
+                
+                new_str = new_str + " " + mod_str;
+            
+            }
+
+            return new_str;
+            
+        }
+
+        
+        // Prompt user to enter a sentence
+        //var input_sentence = 'the very cute puppy'; // Test Case
+        var input_sentence = prompt("Enter a sentence (in all lowercase)");
+        output_sentence = convert_first_letter(input_sentence);
+        console.log( output_sentence ); // Debug message to Console
+        // To see the output, go open Chrome --> Developer Tools --> Console
+        alert(output_sentence);
+        // Do NOT modify the above code
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

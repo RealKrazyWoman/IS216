@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Challenge 3 - Friends Fan Page</title>
+
+    <!-- How do we refer to Bootstrap CDN? 
+        Go to Bootstrap 4 website: https://getbootstrap.com/
+        And go to Get Started
+        Get "Starter template" code!
+
+        https://www.youtube.com/watch?v=hhfO5nc5ao8
+    -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+<!-- Navigation -->
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+       
+        <div class="container">
+            <img src="images/friends.jpg" style="width:100px; height:50px">
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Another Div, id="myMenu" -->
+            <div class="collapse navbar-collapse" id="myMenu" style="border:2px solid blue">
+                <div class="navbar-nav ml-auto" style="border:2px solid yellow">
+
+                    <a class="nav-item nav-link text-white active" href="#">Home</a>
+                    <a class="nav-item nav-link text-white" href="#">Videos</a>
+                    <a class="nav-item nav-link text-white" href="#">Photos</a>
+                    <a class="nav-item nav-link text-white" href="#">Contact</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+<!-- Introduction -->
+
+<div class="container">
+    <h2 class="display-4 text-center p-3">Introduction</h2>
+
+    <p>Friends is an American television sitcom, created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six friends in their 20s and 30s who live in Manhattan, New York City. The series was produced by Bright/Kauffman/Crane Productions, in association with Warner Bros. Television. The original executive producers were Kevin S. Bright, Kauffman, and Crane.</p>
+</div>
+
+
+<!-- Meet the Cast, 6 cards -->
+<div class="container">
+    <h2 class="display-4 text-center p-3">Meet The Cast</h2>
+
+    <div class="row align-item-center">
+
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+
+            <!-- Add a card -->
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="images/rachel.jpg" class="card-img-top" alt="Rachel">
+                <div class="card-body">
+                  <h5 class="card-title">Rachel</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 text-center">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="images/monica.jpg" class="card-img-top" alt="Monica">
+                <div class="card-body">
+                  <h5 class="card-title">Monica</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="images/phoebe.jpg" class="card-img-top" alt="Phoebe">
+                <div class="card-body">
+                  <h5 class="card-title">Phoebe</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="images/chandler.jpg" class="card-img-top" alt="Chandler">
+                <div class="card-body">
+                  <h5 class="card-title">Chandler</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="images/joey.jpg" class="card-img-top" alt="Joey">
+                <div class="card-body">
+                  <h5 class="card-title">Joey</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 ">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="images/ross.jpg" class="card-img-top" alt="Ross">
+                <div class="card-body">
+                  <h5 class="card-title">Ross</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Form -->
+
+    <!--jumbotron-fluid-->
+    <div class="jumbotron bg-dark text-white text-center">
+
+        <form>
+        
+            <div class="container  px-5">
+            <h1 class="display-4">Write to Friends Cast </h1>
+            
+            <div class="row">
+
+                <div class="col">
+                    <div class="form-group text-left">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" class="form-control">
+                    </div>
+                </div>
+            
+                <div class="col">
+                    <div class="form-group text-left">
+                        <label for="Country">Country</label>
+                        <input type="text" name="country" id="country" class="form-control">
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group text-left">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group text-left">
+                        <label for="favorite">Who is your most favorite member?</label>
+                        <select name="favorite" class="form-control">
+                            <option value="rachel" selected >Rachel</option>
+                            <option value="Monica" >Monica</option>
+                            <option value="Phoebe">Phoebe</option>
+                            <option value="Chandler">Chandler</option>
+                            <option value="Joey">Joey</option>
+                            <option value="Ross">Ross</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div class="row">   
+            </div>-->
+
+            <button type="submit" class="btn-danger btn-lg btn-block">Send Letter to the Cast</button>
+
+        </div>
+    </form>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+
+</body>
+</html>

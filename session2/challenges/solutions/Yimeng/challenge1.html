@@ -1,0 +1,242 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YM - Challenge 1</title>
+
+    <!-- Internal CSS styling -->
+    <style>
+
+        /* DO NOT MODIFY THIS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add your CSS script below */
+
+        body {
+            /*background: url('images/justin_bg.jpg') no-repeat right top fixed;*/
+            background-image: url('images/justin_bg.jpg');
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .outer-box{
+            margin: 30px;    /* can use width:80% */
+        }
+
+        .header-box{
+            margin-bottom:20px;
+            background-color:black;
+            border: 5px solid blue;
+            border-top: 5px dotted blue;
+            border-bottom: 5px dotted blue;
+            padding: 20px;   /*spaces surrounding the text*/
+            color:white;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+        .header-box h1{
+            letter-spacing: 10px;
+            word-spacing: 25px;
+            text-decoration: underline; 
+            font-style: italic; 
+            text-transform: uppercase; 
+        }
+
+
+        .middle-box{
+            margin-bottom:20px;
+            background-color: yellow;
+            border: 10px dotted red;
+            padding: 10px;
+            font-size: 10px;
+            font-weight: bold;
+            color: black;
+            line-height: 2;
+        }
+
+        .middle-box h1{
+           width:300px; 
+           margin:0 auto; 
+           font-size:20px; 
+           font-weight: bold; 
+           background-color: #ffe4e1; 
+           border:2px dotted black; 
+           text-align: center;
+        }
+
+        p.two {
+            background-color:#48f5e4; padding:2px;text-align: center; font-style: italic;
+        }
+
+        a:link {
+            color:orange;
+        } 
+
+        a:hover {
+            color: hotpink;
+            background-color:yellow;
+        }
+       
+
+        .bottom-box{
+            margin-bottom:20px;
+            background-color: lightgreen;
+            border: 3px solid blue;
+            border-radius: 10px;
+
+            padding: 10px;
+            font-size: 10px;
+            color: black;
+        }
+
+        .bottom-box h2{
+            font-family:'Times New Roman', Times, serif;
+            font-size:20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bottom-box ul{
+            list-style-image: url('images/justin_list_button.png');
+            list-style-position:inside;
+            padding-left:20px; 
+            font-weight: bold;
+        }
+
+        .bottom-box li{
+            border-bottom: 2px dotted black;
+        }
+
+        .love-box{
+            margin-bottom:20px;
+            background-color: white;
+            border: 5px solid purple;
+            padding: 10px;
+        }
+
+        .love-box h2{
+            background-color:pink; 
+            font-size:15px;
+            font-weight: bold; 
+            padding: 5px;
+            text-align:center; 
+            border:2px dotted red;
+            margin-bottom:10px;
+        }
+
+        input[type=text], textarea {
+            width: 50%;
+            padding-top: 10px ;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom:20px
+        }
+
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:10px;
+            display: block;
+        }
+
+        input[type=submit] {
+            background-color: black;
+            color: white;
+            padding: 5px 5px;
+            margin: 8px 0;
+         
+        }
+
+        .footer-box{
+            background-color:grey;
+            text-align:center;
+            font-size:10px;
+            color:white;
+            margin-bottom:30px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--
+        DO NOT MODIFY the baseline HTML script given to you!
+        For example,
+        - Do NOT change 'class' names
+        - Do NOT change the HTML structure (don't shift elements around)
+    -->
+
+    <div class="outer-box">
+
+        <div class="header-box">
+            <h1 >Justin Bieber</h1>
+            <p>
+                Justin Drew Bieber is a Canadian singer and songwriter. Discovered at age 13 by talent manager Scooter Braun after he had watched his YouTube cover song videos, Bieber was signed to RBMG Records in 2008. 
+            </p>
+        </div>
+
+
+        <div class="middle-box">
+            <h1 >Early Life</h1>
+            <p>
+                Bieber was born on March 1, 1994, in London, Ontario, at St Joseph's Hospital, and was raised in Stratford, Ontario. He is the only child of Jeremy Jack Bieber and Pattie Mallette, who were never married. Mallette's mother Diane and stepfather Bruce helped her raise her son. Bieber's ancestry includes French-Canadian, Irish, English, Scottish, and German.
+            </p>
+
+            <p class="two">
+                For more information, visit <a href="https://en.wikipedia.org/wiki/Justin_Bieber" target="_blank">this Wiki page</a> and read!
+            </p>
+        </div>
+
+        <div class="bottom-box">
+            <h2>Describe Justin</h2>
+            <ul>
+                <li>Talented</li>
+                <li>Handsome</li>
+                <li>He is <span style="color:red;text-decoration: line-through;">single</span> 
+                          <span style="color:blue"> married </span></li>
+            </ul>
+        </div>
+
+        <div class="love-box">
+            <h2>Send My Love</h2>
+            
+            <form>
+
+                <div class="form-field">
+                    <label>Name: </label>
+                    <input type="text" name="myname">
+                </div>
+
+                <div class="form-field">
+                    <label>Email: </label>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="form-field">
+                    <label>Love Letter:</label>
+                    <textarea name="loveletter"></textarea>
+                </div>
+
+                <input type="submit" class="button" value="Send My Love">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-box">
+        <p>
+            Copyright &copy; 2020 YM 
+        </p>
+    </div>
+    
+</body>
+</html>

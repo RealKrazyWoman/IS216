@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 6</title>
+
+    <script>
+
+        /*
+            Write a JavaScript code that performs the following:
+            1. When this webpage loads in web browser:
+                - Prompt the user to select an integer between 1 and 10 (both inclusive).
+            2. Receive the user input and save into a variable.
+            3. Verify that it is a valid integer between 1 and 10.
+            4. If it is not a valid input:
+                - Alert "Hello Hello Invalid Input!"
+                - Program ends
+            5. If it is a valid input:
+                - Generate a random integer between 1 and 10 (both inclusive) 
+                    and save it into a variable called lucky_number
+                - If the user input matches lucky_number:
+                    - Alert "Lucky number is 7! Have a nice day!"
+                      (where 7 is to be replaced with lucky_number)
+                - Else
+                    - Alert "Lucky number is 7! Ouch... try again next time!"
+                      (where 7 is to be replaced with lucky_number)
+                - Program ends
+        */
+
+        // WRITE YOUR CODE HERE
+        var str;
+        var userInput = prompt("Please enter an integer between 1 and 10 (both inclusive)");
+
+
+        if ( userInput.length == 0 ){
+            alert("Hello Hello Invalid Input")
+        }
+        else if ( isNaN(userInput)) {
+            alert ("Hello Hello Must be integer");
+        } 
+        else if ( !(userInput >= 1 && userInput <= 10) ) {
+            alert("User input must be between 1 and 10");
+        }
+
+        /* https://www.w3schools.com/js/tryit.asp?filename=tryjs_random_1_10*/
+        var lucky_number = Math.floor(Math.random() * 10) + 1; 
+        console.log(lucky_number);
+
+
+        if ( userInput == lucky_number ){
+            str = "Lucky number is " +  lucky_number + "! Have a nice day!";
+            alert (str);
+        }
+        else {
+            str = "Lucky number is " +  lucky_number + "! Ouch... try again next time!";
+            alert (str);
+        }
+    
+
+
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

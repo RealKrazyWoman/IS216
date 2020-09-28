@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Challenge 5 - Joe Resume</title>
+
+    <!-- How do we refer to Bootstrap CDN? 
+        Go to Bootstrap 4 website: https://getbootstrap.com/
+        And go to Get Started
+        Get "Starter template" code!
+
+        https://www.w3schools.com/icons/fontawesome_icons_brand.asp
+        https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
+        
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .fa {
+          padding: 10px;
+          font-size: 20px;
+          width: 40px;
+          text-align: center;
+          text-decoration: none;
+          margin: 2px 2px;
+          border-radius: 50%;
+        }
+        
+        .fa:hover {
+            opacity: 0.5;
+        }
+        
+        .fa-facebook {
+          background:white;
+          border:1px solid #5990dc;
+          color:#5990dc;
+        }
+        
+        .fa-twitter {
+          background: white;
+          border:1px solid #5990dc;
+          color:#5990dc
+        }
+        
+        .fa-google-plus {
+          background: white;
+          border:1px solid #5990dc;
+          color:#5990dc
+        }
+        .fa-instagram {
+          background: white;
+          border:1px solid #5990dc;
+          color:#5990dc;
+        }
+        
+    </style>    
+</head>
+<body>
+
+<div class="container">
+    <div class="row" >
+        
+        <!-- first col -->
+        <div class="col-md-4">
+
+            <div class="card mx-auto">
+                <img src="images/henry.jpg" class="img-fluid max-width:100%;height:auto">
+                <div class="card-body bg-light">
+                  <h5 class="card-title text-center">Joe Fox</h5>
+                  <p class="card-text text-center">I am open to new opportunities. I am available January 2021 onwards.</p>
+                  <div class="text-center">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google-plus"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                  </div>
+                </div>
+            </div>
+                
+                    
+        </div>
+                    
+        <div class="col-md-8">
+            <h3 class="my-3">Joe Fox</h3>
+            <p class="no-margin-bottom">Nulla efficitur facilisis mollis. Aliquam ullamcorper mi felis, a semper turpis laoreet in. Nulla pharetra nisl at purus pellentesque ultricies. Sed a augue condimentum, condimentum ex a, bibendum enim. Proin eget massa a velit congue interdum. Suspendisse a egestas nunc. In eu dignissim nulla, ut semper urna. Nulla ullamcorper sed est quis placerat. Aenean id sagittis lectus, consequat ultrices justo. Fusce venenatis lacinia ligula in scelerisque. Proin tincidunt diam at turpis condimentum interdum ac id magna. Sed malesuada nunc ut leo iaculis, vitae consectetur nulla consectetur. Curabitur gravida sapien sagittis congue mattis. Aenean hendrerit rhoncus magna in hendrerit.</p>
+                            
+
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="col" class="text-danger"><i class="fa fa-graduation-cap mr-2" style="font-size:15px"></i>Degree:</th>
+                    <td>Master's Degrees</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="text-warning"><i class="fa fa-diamond mr-2" style="font-size:15px"></i>Exp:</th>
+                    <td>10 Year in Technology</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="text-danger"><i class="fa fa-file-o mr-2" style="font-size:15px"></i>Courses:</th>
+                    <td>Software, Hardware, Mathematics</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="text-success"><i class="fa fa-map-marker mr-2" style="font-size:15px"></i>Address:</th>
+                    <td>789 Sunshine Lane, St. Paul, Minnesota, USA</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="text-secondary"><i class="fa fa-mobile mr-2" style="font-size:15px"></i>Phone:</th>
+                    <td>+1 612 555 1234</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="text-danger"><i class="fa fa-envelope mr-2" style="font-size:15px"></i>Email:</th>
+                    <td>joe.fox@example.com</td>
+                  </tr>
+
+                </tbody>
+            </table>
+            
+            <div class="row mt-2">
+                <div class="col font-weight-bold">
+                      <h5> Professional Skills <h5>
+                </div>
+            </div>
+  
+            <div class="row">
+                <div class="col-6 mt-2">
+                    <label> Positive Behaviors </label>
+                </div>
+                <div class="col-6 mt-2 text-right">
+                    <label>40% </label>
+                </div>
+            </div>
+  
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <label> Teamworking Abilities </label>
+                </div>
+                <div class="col-6 mt-3 text-right">
+                    <label>50% </label>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <label> Time Management </label>
+                </div>
+                <div class="col-6 mt-3 text-right">
+                    <label>60%</label>
+                </div>
+            </div>
+    
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <label>Excellent Communication</label>
+                </div>
+                <div class="col-6 mt-3 text-right">
+                    <label>80%</label>
+                </div>
+            </div>
+    
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <div class="mb-5"> 
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ConditionalRender</title>
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+    <div id='app'>
+        <div v-if="Math.random() > 0.5"> 
+            Now you see me!
+        </div>  
+        <div v-else> 
+            Now you don't!
+        </div>
+    </div>
+          
+    <script>
+        var vm = new Vue({
+            el: '#app'
+        })
+    </script>
+ 
+</body>
+</html>

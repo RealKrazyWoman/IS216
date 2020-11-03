@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="root">
+        
+        <!-- (14) @click (@ is the shorthand for v-on)
+            Add a new dog to an Array of objects
+            When button is clicked on
+        -->
+        <label>Dog's Name</label>
+        <input v-model="new_dog_name">
+
+        <label>Dog's Age</label>
+        <input v-model="new_dog_age">
+
+        <button @click="add_dog">
+            Add
+        </button>
+
+        <ul>
+            <li v-for="dog in dogs">
+                {{ dog.name }} is {{ dog.age }} years old
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                dogs: [
+                    {name: 'healthy', age: 3},
+                    {name: 'smiley', age: 7},
+                    {name: 'happy', age: 1},
+                    {name: 'sleepy', age: 12}
+                ],
+
+                new_dog_name: '',
+                new_dog_age: ''
+            },
+
+            methods: {
+                add_dog: function() {
+                    this.dogs.push(
+                        {
+                            name: this.new_dog_name,
+                            age: this.new_dog_age
+                        }
+                    )
+                    this.new_dog_name = ''
+                    this.new_dog_age = ''
+                }
+            }
+
+        })
+    </script>
+
+</body>
+</html>

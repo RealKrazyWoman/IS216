@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="root">
+
+        Send Love Letter
+        <br>
+
+        <input v-model="sentence">
+        
+
+        <!-- (6.1) v-bind is a Directive.
+
+                -> To bind an attribute value with a vue variable
+
+                Can take an HTML attribute (e.g. disabled which works in CSS)
+                and parse JavaScript (e.g. sentence.length < 10).
+                If the condition is true, then HTML attribute 'disabled' will be added.
+        -->
+        <br>
+        <button onclick="alert('Love is sent')" v-bind:disabled="sentence.length < 10">
+            Send My Love
+        </button>
+
+
+
+        <!-- (6.2) v-bind is often used via its "short-hand" version
+                just use : followed by HTML attribute
+        -->
+        <br>
+        <button onclick="alert('Love is sent again')" :disabled="sentence.length < 15">
+            Send My Love Again
+        </button>
+
+
+
+        <!-- (6.3) v-bind for <a> tag -->
+        <hr>
+        Click <a :href="url" target="_blank">Here</a> to enter Justin's Heart
+
+
+        
+
+        <!-- (6.4) v-bind to change 'style' attribute of <div> 
+            Ref: https://vuejs.org/v2/guide/class-and-style.html
+            
+            The object syntax for v-bind:style is pretty straightforward - 
+            it looks almost like CSS, except it’s a JavaScript object.
+            
+            You can use either camelCase or kebab-case (use quotes with kebab-case)
+            for the CSS property names:
+        -->
+        <hr>
+        <!-- <div :style="{ 'backgroundColor': bg_color, 'color': font_color, 'fontSize' : font_size }"> -->
+        <div :style="{ 'background-color': bg_color, 'color': font_color, 'fontSize' : font_size }">
+            I am just a paragraph inside a div.
+        </div>
+        
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                sentence: '',
+                url: 'https://www.justinbiebermusic.com/',
+                bg_color: 'yellow',
+                font_color: 'blue',
+                font_size: '30px'
+            }
+
+        })
+    </script>
+
+</body>
+</html>

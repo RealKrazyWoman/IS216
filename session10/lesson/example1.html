@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN, as of mid-October 2020, Vue.js v2.6.12
+        20-Sep-2020, Vue.js Version 3 was released
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="root">
+
+        <!-- (1.1) How to display data using data binding. 
+            Double-mustache
+
+            The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces):
+                <h1> Name : {{name}} </h1>
+             	<h1> Phone : {{getPhone()}} </h1>
+
+            {{ … }}  tells Vue to take everything inside them and parse it as code
+        -->
+        <h1>
+            {{ fullname }}
+        </h1>
+
+
+        <!--
+            The data and the DOM are now linked, and everything is now reactive.
+            
+            How do we know?
+            Open your browser’s JavaScript console (right now, on this page) and 
+            set app.fullname to a different value.
+            -> You should see the rendered example above update accordingly.
+
+            Note that we no longer have to interact with the HTML directly.
+            A Vue app attaches itself to a single DOM element (#app in our case) then fully controls it.
+        -->
+
+
+        <!-- ================= STOP HERE ================= -->
+        <!-- Right Click on Justin Bieber and click Inspect -->
+        <!-- In the Console, type:
+                app.fullname = 'Selena Gomez'
+
+            How does this affect the 1nd <h1> above?
+        -->
+
+
+
+        <!-- (1.2) v-text is a Directive -->
+        <h1 v-text="phone">
+        </h1>
+
+
+
+        <!-- (2.1) call method hello() -->
+        <h1>
+            {{ hello() }}
+        </h1>
+
+        <!-- (2.2) call method bye() -->
+        <h1>
+            {{ bye() }}
+        </h1>
+
+
+        
+
+        <!-- (3) v-model is a Directive.
+
+                -> binding Vue parameters to the values of input elements such as text, radio, checkbox, select, etc.
+
+                It will read data by the specified name.
+
+                v-model works for form elements
+                e.g. It does not work for <h1>, <p> and so on to display text.
+        -->
+        <hr>
+        <input v-model="fullname">
+        
+        
+
+        <!-- (4) v-if, v-else-if, v-else ... are Directives.
+                Only one of them will be added to DOM.
+        -->
+        <hr>
+        <h1 v-if="fullname === 'Justin Bieber'">
+            Baby Baby
+        </h1>
+        <h1 v-else-if="fullname === 'Selena Gomez'">
+            We don't talk anymore
+        </h1>
+        <h1 v-else>
+            I don't recognize this person...
+        </h1>
+
+
+
+        <!-- (5) v-show is a Directive
+            It adds the below <div> to DOM regardless.
+            Right-click on the text 'Green' and go to Inspect.
+            What do you see?
+                e.g. display: none (if count !== 1)
+                     the above isn't added... (if count === 1)
+        -->
+        <hr>
+        <h1>
+            Hello World
+        </h1>
+        <div v-show="count === 1">
+            Green
+        </div>
+    
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                fullname: 'Justin Bieber',
+                phone: '612-555-1234',
+                count: 1
+            },
+
+            methods: {
+                hello: function() {
+                    return "Hello How Are Ya?"
+                },
+
+                bye: function () {
+                    return "Bye Bye " + this.fullname
+                }
+            }
+
+        })
+    </script>
+
+</body>
+</html>

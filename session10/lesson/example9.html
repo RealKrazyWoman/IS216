@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="root">
+        
+        <!-- (16) See <li> below
+                We can "pipe" (using pipe symbol |, very similar to Linux pipe)
+
+                To pipe, the transformation methods must be listed under "filters"
+        -->
+        <label>Cat's Name</label>
+        <input v-model="new_cat" v-on:keyup.enter="add_cat">
+
+        <ul>
+            <li v-for="cat in cats">
+                {{ cat | capitalize | say_meow }}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                cats: [
+                    'filthy',
+                    'smelly',
+                    'fatty',
+                    'greedy',
+                    'needy'
+                ],
+
+                new_cat: '' // new cat's name
+            },
+
+            methods: {
+                add_cat: function() {
+                    this.cats.push(this.new_cat);
+                    this.new_cat = '';
+                }
+            },
+
+            filters: {
+                capitalize: function(value) {
+                    return value.toUpperCase()
+                },
+
+                say_meow: function(value) {
+                    return value + " MEOW~~~"
+                }
+            }
+
+        })
+    </script>
+
+</body>
+</html>

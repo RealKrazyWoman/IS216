@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="root">
+        
+        <!-- (12) v-on:click
+            Add a new cat
+            Do so when the user clicks button
+            -> It calls add_cat() method
+        -->
+        <label>Cat's Name</label>
+        <input v-model="new_cat">
+        <button v-on:click="add_cat">
+            Add
+        </button>
+
+        <ul>
+            <li v-for="cat in cats">
+                {{ cat }}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                cats: [
+                    'filthy',
+                    'smelly',
+                    'fatty',
+                    'greedy',
+                    'needy'
+                ],
+
+                new_cat: '' // new cat's name
+            },
+
+            methods: {
+                add_cat: function() {
+                    this.cats.push(this.new_cat)
+                }
+            }
+
+        })
+    </script>
+
+</body>
+</html>

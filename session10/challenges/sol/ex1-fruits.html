@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruits</title>
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+<body>
+  <div id="app">
+      {{ message }} </br>
+      {{ var1 }} <input type="radio" name="fruit">
+      {{ var2 }} <input type="radio" name="fruit">
+      {{ var3 }} <input type="radio" name="fruit">
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message : 'Choose your favorite fruit:',
+        // we can also do this with an array
+        var1 : 'apple',
+        var2 : 'orange',
+        var3 : 'peach'
+      }
+    })
+  </script>
+
+  <!-- challenge -->
+  <!-- note: id must be unique. i.e. it must be different from the one above -->
+  <div id="app2">
+    {{ message }} </br>
+    {{ fruits[0] }} <input type="radio" name="fruit">
+    {{ fruits[1] }} <input type="radio" name="fruit">
+    {{ fruits[2] }} <input type="radio" name="fruit">
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app2',
+      data: {
+        message : 'Choose your favorite fruit:',
+        // using an array
+        fruits : ['apple', 'orange', 'peach'],
+      }
+    })
+  </script>
+</body>
+</html>

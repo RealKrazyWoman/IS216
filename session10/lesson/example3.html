@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        .red {
+            border: 5px solid red;
+        }
+
+        .green {
+            border: 5px solid green;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="root">
+
+        Send Love Letter
+        <br>
+
+        <!-- (7.1) Dynamically add class
+                If sentence < 10, the below input text field will have a RED border
+        -->
+        <input v-model="sentence" :class="{ red: sentence.length < 10 }">
+
+        <br>
+        <button onclick="alert('Love is sent again')" :disabled="sentence.length < 10">
+            Send My Love Again
+        </button>
+
+
+        <hr>
+
+        <!-- (7.2) Dynamically add class (from an Array)
+                If sentence < 10, the below input text field will have a RED border
+        -->
+        <input v-model="sentence" :class="[ sentence.length < 10 ? 'red' : 'green' ]">
+
+        <br>
+        <button onclick="alert('Love is sent again')" :disabled="sentence.length < 10">
+            Send My Love Again
+        </button>
+
+
+
+        <!-- (8) v-text (revisited)
+                We can dynamically capture user input from <input> form element
+                AND display as text.
+                In the <input>, type "Hello Justin My Love"
+        -->
+        <hr>
+        <h2>v-text</h2>
+        <p v-text="sentence">
+        </p>
+
+
+
+        <!-- (9) v-html is a Directive
+                This directive can take HTML tag.
+                In the <input>, type "<h1><i>Hello Justin My Love</i></h1>"
+        -->
+        <hr>
+        <h2>v-html</h2>
+        <p v-html="sentence">
+        </p>
+
+
+
+        <!-- (10) v-once is a Directive
+                This will take the initial value of sentence and display.
+                If sentence's value changes (<input>) by the user,
+                this text won't change
+        -->
+        <hr>
+        <h2>v-once</h2>
+        <p v-once>
+            {{ sentence }}
+        </p>
+
+
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                sentence: 'hahaha'
+            }
+
+        })
+    </script>
+
+</body>
+</html>

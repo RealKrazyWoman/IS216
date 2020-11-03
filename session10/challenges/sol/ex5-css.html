@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClassStyleBinding</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+
+    <style>
+        .redBox {
+            background-color: red;
+        }
+        .blueBox {
+            background-color: blue;
+        }
+
+        #demo1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="app">
+    <div v-bind:id="id" class="m-2" v-bind:class="{'blueBox': blueBox, 'redBox': redBox}">
+        div ID : {{id}} 
+    </div>
+    <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
+                because '-' is a minus operator for (Vue) JavaScript  -->
+    <button type="button" v-bind:class="{'btn-primary': blueBtn, 'btn-danger': redBtn}" @click="changeColor">Change Color</button>
+  </div>
+
+  <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            id: "demo1",
+            blueBox: false,
+            redBox: true,
+            blueBtn: false,
+            redBtn : true,
+        },
+        methods: {
+            changeColor: function() {
+                if (this.blueBox) {
+                    this.redBox = true;
+                    this.blueBox = false;
+                    this.redBtn = true;
+                    this.blueBtn = false;
+                } else {
+                    this.blueBox = true;
+                    this.redBox = false;
+                    this.blueBtn = true;
+                    this.redBtn = false;
+                }
+            }
+        }
+    })    
+  </script>
+
+    <div id="app2">
+        <div v-bind:id="id" class="m-2" v-bind:style="{'color':activeColor}">
+            div ID : {{id}} 
+        </div>
+        <!-- <input type="text" class="m-2" v-model="activeColor" > -->
+        <button type="button" class="btn-primary" @click="changeTextColor">Change Text Color</button> 
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app2',
+            data: {
+                id: "demo2",
+                activeColor: "blue"
+            },
+            methods: {
+                changeTextColor: function() {
+                    if (this.activeColor == "blue")
+                        this.activeColor = "red";
+                    else 
+                        this.activeColor = "blue";
+                }
+            }
+        })    
+        </script>
+</body>
+</html>

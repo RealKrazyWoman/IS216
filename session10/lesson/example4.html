@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="root">
+        
+        <!-- (11.1) v-for is a Directive
+                It can take an array and loop through -
+                print each element in a list
+        -->
+        <ul>
+            <li v-for="cat in cats">
+                {{ cat }}
+            </li>
+        </ul>
+
+
+        <!-- (11.2) v-for is a Directive
+                It can take an array of objects - and loop through -
+                print each element in a list
+        -->
+        <ol>
+            <li v-for="dog in dogs">
+                {{ dog.name }} is {{ dog.age }} years old
+            </li>
+        </ol>
+
+
+        <!-- (11.3) v-for is a Directive
+                It can take an array of objects - and loop through -
+                print each element in a list
+        -->
+        <ol>
+            <li v-for="dog in dogs">
+                {{ dog.name + " is " + dog.age + ' years old' }}
+            </li>
+        </ol>
+
+
+        <!-- (11.4) v-for is a Directive
+                It can take an array of objects - and loop through -
+                print each element in a list
+        -->
+        <ol>
+            <li v-for="dog in dogs">
+                {{ dog.name.toUpperCase() + " is " + dog.age + ' years old' }}
+            </li>
+        </ol>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#root',
+
+            data: {
+                // Array
+                cats: [
+                    'filthy',
+                    'smelly',
+                    'fatty',
+                    'greedy',
+                    'needy'
+                ],
+                // Objects
+                dogs: [
+                    {name: 'healthy', age: 3},
+                    {name: 'smiley', age: 7},
+                    {name: 'happy', age: 1},
+                    {name: 'sleepy', age: 12}
+                ]
+            }
+
+        })
+    </script>
+
+</body>
+</html>

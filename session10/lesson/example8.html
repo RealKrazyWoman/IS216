@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    
+    <div id="main">
+        
+        <!-- (15) See the method reverseSentence below
+                We can "chain" function calls by using dot after dot after dot ...
+        -->
+        <h2>
+            {{ sentence }}
+        </h2>
+        
+        <!-- <button v-on:click="reverseMessage">Reverse Message</button> -->
+        <button @click="reverseSentence">Reverse Sentence</button>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+
+            el: '#main',
+
+            data: {
+                sentence: "the quick brown fox jumps over the lazy dog"
+            },
+
+            methods: {
+                reverseSentence: function() {
+                    this.sentence = this.sentence.split(' ').reverse().join(' ')
+                }
+            }
+
+        })
+    </script>
+
+</body>
+</html>

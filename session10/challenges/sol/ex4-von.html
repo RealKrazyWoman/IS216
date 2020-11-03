@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle</title>
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+    <div id='app'>
+        <div v-if="show"><p>Hi, now you see me!</p></div>
+        <button v-on:click="toggleShow()">Toggle Show</button>
+    </div>
+          
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: { 
+                show: true
+            },
+            methods: {
+                toggleShow: function() { 
+                    if(this.show===true)
+                        this.show = false;
+                    else
+                        this.show = true;
+                }
+            }
+        })
+    </script>
+ 
+</body>
+</html>

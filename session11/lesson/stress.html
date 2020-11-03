@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Data binding for form elements (Part 2), Filters, Computed Properties</title>
+    <style>
+        body {
+            font-size: 110%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <!-- form -->
+        <h1>Week 11 is Beautiful</h1>
+
+        My fullname is:
+        <input type="text" size="30" name="fullname">
+        <br><br>
+
+        I am a:
+        <input type="radio" name="gender" value="boy">Boy
+        <input type="radio" name="gender" value="girl">Girl
+
+        <br><br>
+        The following modules stress me greatly:<br>
+        <input type="checkbox" name="modules[]" value="BPAS"> BPAS
+        <input type="checkbox" name="modules[]" value="IDP"> IDP
+        <input type="checkbox" name="modules[]" value="WAD2"> WAD2
+        <input type="checkbox" name="modules[]" value="CT"> CT
+
+        <br><br>
+        Lately, I feel:
+        <select name="feel" multiple>
+            <option value="sad">Sad</option>
+            <option value="devastated">Devastated</option>
+            <option value="hopeless">Hopeless</option>
+            <option value="suffocated">Suffocated</option>
+        </select>
+
+        <br><br>
+        If I could get away from work now, my dream destination would be:
+        <select name="travel">
+            <option disabled></option>
+            <option>Spain</option>
+            <option>Korea</option>
+            <option>Japan</option>
+            <option>USA</option>
+        </select>
+
+        <br><br>
+        What do you want to tell yourself - to cheer yourself up?<br>
+        <textarea name="message" rows="3" cols="50"></textarea>
+
+
+
+        <!-- summary -->
+        <hr>
+
+        <p>Dear Mr. Michael Scott,</p>
+        <p>
+            You've indicated that the following modules stress you greatly:
+            <ul>
+                <li>BPAS</li>
+                <li>IDP</li>
+            </ul>
+        </p>
+        <p>
+            You feel 
+            <span style="font-size: 20px; color: red">sad, devastated, suffocated</span>
+            !!!
+        </p>
+        <p>
+            To help relieve your stress, we prepared a private jet to your dream destination:
+            <span style="font-style: italic; font-weight: bold; color: green; font-size: 20px">
+                Italy
+            </span>
+        </p>
+        <p>
+            Next time when you're stressed, tell yourself:<br>
+            <span style="font-style:italic; color: blue; font-size:20px">
+                Chill bro everything's gonna be alright
+            </span>
+        </p>
+        <p>
+            <span style="background-color: yellow;">
+                More Money More Problem - Notorious BIG
+            </span>
+        </p>
+
+    </div>
+
+</body>
+</html>

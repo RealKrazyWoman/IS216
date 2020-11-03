@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Data binding for form elements (Part 2)</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        body {
+            font-size: 110%;
+        }
+
+        .red {
+            border: red solid 5px;
+        }
+
+        .green {
+            border: green solid 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- form -->
+        <h1>Week 11 is Beautiful</h1>
+
+        My fullname is:
+        <input v-model="fullname"
+            v-bind:class="[ fullname.length > 0 ? 'green' : 'red' ]"
+            type="text" size="30" name="fullname">
+        <br><br>
+
+        I am a:
+        <input v-model="gender" type="radio" name="gender" value="boy">Boy
+        <input v-model="gender" type="radio" name="gender" value="girl">Girl
+
+        <br><br>
+        The following modules stress me greatly:<br>
+        <input v-model="modules" type="checkbox" name="modules[]" value="BPAS"> BPAS
+        <input v-model="modules" type="checkbox" name="modules[]" value="IDP"> IDP
+        <input v-model="modules" type="checkbox" name="modules[]" value="WAD2"> WAD2
+        <input v-model="modules" type="checkbox" name="modules[]" value="CT"> CT
+
+        <br><br>
+        Lately, I feel:
+        <select v-model="emotions" name="emotions" multiple>
+            <option value="sad">Sad</option>
+            <option value="devastated">Devastated</option>
+            <option value="hopeless">Hopeless</option>
+            <option value="suffocated">Suffocated</option>
+        </select>
+
+        <br><br>
+        If I could get away from work now, my dream destination would be:
+        <select v-model="travel" name="travel">
+            <option disabled></option>
+            <option>Spain</option>
+            <option>Korea</option>
+            <option>Japan</option>
+            <option>USA</option>
+        </select>
+
+        <br><br>
+        What do you want to tell yourself - to cheer yourself up?<br>
+        <textarea v-model="message" name="message" rows="3" cols="50"></textarea>
+
+
+
+        <!-- summary -->
+        <hr>
+
+        <p v-show=" fullname.length > 0">
+            Dear {{ get_prefix() }} {{ fullname }},
+        </p>
+        <p v-show=" modules.length > 0 ">
+            You've indicated that the following modules stress you greatly:
+            <ul>
+                <li v-for="module in modules">
+                    {{ module }}
+                </li>
+            </ul>
+        </p>
+        <p v-show=" emotions.length > 0">
+            You feel 
+            <span style="font-size: 20px; color: red">
+                {{ get_emotions() }}
+            </span>
+            !!!
+        </p>
+        <p v-show=" travel !== '' ">
+            To help relieve your stress, we prepared a private jet to your dream destination:<br>
+            <span style="font-style: italic; font-weight: bold; color: green; font-size: 20px">
+                {{ travel | add_fun }}
+            </span>
+        </p>
+        <p v-show=" message != '' ">
+            Next time when you're stressed, tell yourself:<br>
+            <span style="font-style:italic; color: blue; font-size:20px">
+                {{ message }}
+            </span>
+        </p>
+
+        <p>
+            (Say 1st time) 
+            <span style="background-color: yellow;">
+                {{ quote_by_who }}
+            </span>
+        </p>
+
+        <p>
+            (Say 2nd time) 
+            <span style="background-color: yellow;">
+                {{ quote_by_who }}
+            </span>
+        </p>
+
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                fullname: 'Michael Scott',
+                gender: 'boy',
+                modules: [],
+                emotions: [],
+                travel: '',
+                message: 'Some default message',
+                quote: 'More Money More Problem',
+                quote_who: 'Notorious BIG'
+            },
+            methods: {
+                get_prefix: function() {
+                    let prefix = ''
+                    if( this.gender == 'boy' )
+                        prefix = "Mr."
+                    else if( this.gender == 'girl' )
+                        prefix = "Ms."
+                    return prefix
+                },
+                get_emotions: function() {
+                    if( this.emotions.length > 0 ) {
+                        let str = ''
+                        for(var i = 0; i < this.emotions.length; i++) {
+                            if( i > 0) {
+                                str += ", "
+                            }
+                            str += this.emotions[i]
+                        }
+                        return str
+                    }
+                }
+            },
+            computed: {
+                quote_by_who: function() {
+                    console.log("[quote_by_who] I'm a computed property")
+                    return this.quote + " - " + this.quote_who
+                }
+            },
+            filters: {
+                add_fun: function(value) {
+                    if(value == 'Spain')
+                        return value + " -- Hola!!!"
+                    else if(value == 'Korea')
+                        return value + " -- Annyong!!!"
+                    else if(value == 'Japan')
+                        return value + " -- Konnichiwa!!!"
+                    else if(value == 'USA')
+                        return value + " -- How ya doing?"
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

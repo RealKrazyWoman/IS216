@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compute Age</title>
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+    <div id='app'>
+        <h2>Length: {{ length }} </h2>
+        <h2>Width: {{ width }} </h2>
+        <h2>Area: {{ area }} </h2>
+
+        <button @click="length += 1">Plus length</button>
+        <button @click="width += 1">Plus width</button> 
+        <button @click="length -= 1">Minus length</button>
+        <button @click="width -= 1">Minus width</button> 
+           
+    </div> 
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                length: 4,
+                width: 3
+            },
+            computed: {
+                area : function() {
+                   var res = this.length * this.width
+                   return res
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

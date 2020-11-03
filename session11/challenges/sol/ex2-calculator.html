@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Vue.js Calculator</title>
+  <script type="text/javascript" src="vue.js"></script> 
+  <style>
+    p, input { font-family: monospace; }
+    p { white-space: pre; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p>x <input v-model="x"></p>
+    <p>y <input v-model="y"></p>
+    <p>---------------------</p>
+    <p>= {{result}}</p>
+  </div>
+
+ 
+  <script>
+    function isNotNumericValue(input) {
+      return isNaN(input) || !isFinite(input);
+    }
+    var calc = new Vue({
+      el: '#app',
+      data: { x: 0, y: 0, lastResult: 0 },
+      computed: {
+        result: function() {
+          let x = parseFloat(this.x);
+          if(isNotNumericValue(x))
+            return this.lastResult;
+
+          let y = parseFloat(this.y);
+          if(isNotNumericValue(y))
+            return this.lastResult;
+
+          this.lastResult = x + y;
+
+          return this.lastResult;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

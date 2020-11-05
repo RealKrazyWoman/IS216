@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sound</title>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        body {
+            font-size: 300%
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="room1">
+        Sound level in Room 1
+        <!-- Add Code Here -->
+    </div>
+
+    <div id="room2">
+        Sound level in Room 2
+        <!-- Add Code Here -->
+    </div>
+
+    <div id="room3">
+        Sound level in Room 3
+        <!-- Add Code Here -->
+    </div>
+
+
+
+    <script>
+        Vue.component('sound-icon', {
+            template: "", // add your template code here
+            
+            data: function () {
+                return {
+                    soundEmojis: ['🔇', '🔈', '🔉', '🔊']
+                } 
+            }
+        })
+
+        
+        var room1 = new Vue({
+            el: '#room1',
+            data: {
+                soundLevel: 0
+            }
+        })
+
+    </script>
+    
+    
+</body>
+</html>

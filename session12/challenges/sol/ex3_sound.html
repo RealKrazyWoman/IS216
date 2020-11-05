@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sound</title>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        body {
+            font-size: 300%
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="room1">
+        <h6>Sound Level in Room 1</h6>
+        <input type="number" v-model="soundLevel"> 
+        <sound-icon v-bind:level="soundLevel"></sound-icon>
+    </div>
+
+    <div id="room2">
+        <h6>Sound Level in Room 2</h6>
+        <input type="number" v-model="soundLevel"> 
+        <sound-icon v-bind:level="soundLevel"></sound-icon>
+    </div>
+
+    <div id="room3">
+        <h6>Sound Level in Room 3</h6>
+        <input type="number" v-model="soundLevel"> 
+        <sound-icon v-bind:level="soundLevel"></sound-icon>
+    </div>
+
+
+    <script>
+        
+        Vue.component('sound-icon', {
+            template: "<span> {{ soundEmojis[level] }} </span>", 
+            props: ['level'],
+            data: function () {
+                return {
+                    soundEmojis: ['🔇', '🔈', '🔉', '🔊']
+                } 
+            }
+        })
+
+        var room1 = new Vue({
+            el: '#room1',
+            data: {
+                soundLevel: 0
+            }
+        })
+
+        var room2 = new Vue({
+            el: '#room2',
+            data: {
+                soundLevel: 0
+            }
+        })
+
+        var room3 = new Vue({
+            el: '#room3',
+            data: {
+                soundLevel: 0
+            }
+        })
+    </script>
+    
+    
+</body>
+</html>

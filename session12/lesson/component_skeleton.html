@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component - Skeleton</title>
+
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <style>
+        .outer-box {
+            width: 500px;
+            border: 2px black solid;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .country-box {
+            background-color: yellow;
+        }
+
+        .capital-box {
+            background-color: aqua;
+        }
+
+        .language-box {
+            background-color: pink;
+        }
+
+        .greeting-box {
+            background-color: greenyellow;
+        }
+
+        .food-box {
+            background-color: #ffc89a;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <!-- 1st View instance manages this div -->
+    <div id="app-one" class="outer-box">
+
+        <h1 class="country-box">
+            {{ country }}
+        </h1>
+
+        <p class="capital-box">
+            Capital: {{ capital }}
+        </p>
+
+        <p class="language-box">
+            Language: {{ language }}
+        </p>
+
+        <p class="greeting-box">
+            Greeting: {{ greeting }}
+        </p>
+
+    </div>
+
+
+    <!-- 2nd View instance manages this div -->
+    <div id="app-two" class="outer-box">
+
+        <h1 class="country-box">
+            {{ country }}
+        </h1>
+
+        <p class="capital-box">
+            Capital: {{ capital }}
+        </p>
+
+        <p class="language-box">
+            Language: {{ language }}
+        </p>
+
+        <p class="greeting-box">
+            Greeting: {{ greeting }}
+        </p>
+
+    </div>
+
+
+    <!-- Vue.js -->
+    <script>
+
+        var app1 = new Vue({
+            el: '#app-one',
+
+            data: {
+                country: 'North Korea',
+                capital: 'Pyongyang',
+                language: 'Korean',
+                greeting: 'Annyong'
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app-two',
+            
+            data: {
+                country: 'South Korea',
+                capital: 'Seoul',
+                language: 'Korean',
+                greeting: 'Annyong'
+            }
+        })
+        
+    </script>
+    
+</body>
+</html>

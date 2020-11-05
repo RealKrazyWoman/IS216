@@ -1,0 +1,49 @@
+<html>
+<head>
+    <script language='JavaScript' type='text/javascript'>
+        function validate_form() {
+
+            // There are 3 ways to access a Form Input Field
+            var s = document.forms['entry_form'].subject.value;     // This works if input field has NAME attribute
+            //var s = document.forms['entry_form']['my_subject'].value; // This works if input field has ID attribute
+            //var s = document.entry_form.subject.value;                 // This works if input field has NAME attribute
+
+            if( s.length < 10 ) {
+                alert("Subject has to be minimum 10 characters long!");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h3>Add a New Blog Post</h3>
+
+    <!-- NOTE: We set FORM NAME attribute so we can perform Form Validation using JavaScript -->
+    <form name='entry_form' action='add.php' method='POST' onSubmit="return validate_form()">
+            
+        Subject: <input type='text' name='subject' size='30' id='my_subject' required>
+        <br>
+    
+        Entry: <br>
+        <textarea name='entry' cols='80' rows='5' id='entry_id' required></textarea>
+        <br>
+    
+        Mood:
+            <select name='mood'>
+                <option value='Happy'>Happy</option>
+                <option value='Sad'>Sad</option>
+                <option value='Angry'>Angry</option>
+            </select>
+        <br>
+    
+        <br>
+        <input type='submit' value='Submit New Post'>
+            
+    </form>
+
+    <hr>
+    Click <a href='display.php'>here</a> to return to Main Page
+
+</body>
+</html>

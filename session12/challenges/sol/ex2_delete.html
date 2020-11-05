@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Ajax - Example 3 (Delete a post)</title>
+
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h2> Blog Posts </h2> 
+    <div id="app" class="table m-2"> 
+        <table>
+            <tr><th>ID</th><th>Entry</th><th>Mood</th><td>Delete?</td></tr>
+            <tr v-for="post in posts">
+                <td>{{post.id}}</td>
+                <td>{{post.entry}}</td>
+                <td>{{post.mood}}</td>
+                <td><button class="btn btn-primary" @click="del( post.id ) ">Delete</button></td>
+            </tr>
+        </table>
+
+        <p v-if='showStatus'>{{status.status}}</p>
+    </div>
+
+    <hr>
+        Click <a href='../../lesson/ajax_view.html'>here</a> to return to Main Page
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                showStatus: false,
+                status: '',
+                posts: [] // array of post objects
+            },
+            created: function() { // created is a hook that executes as soon as Vue instance is created
+                axios.get('../../blog/getPosts.php')
+                .then(response => {
+                    // this gets the data, which is an array
+                    post_objs = response.data
+                    for (post of post_objs) {
+                        console.log(post.entry)
+                        // pass the data to Vue instance's posts property
+                        this.posts.push(post)
+                    }
+                })
+                .catch(error => {
+                    this.posts = [{ entry: 'There was an error: ' + error.message }]
+                })
+            },
+            methods: {
+                del: function(id) {
+                    console.log("ID: " + id)
+                    var idx = 0
+                    for (post of this.posts) {
+                        if (post.id == id) {
+                            this.posts.splice(idx,1) // remove this element
+                            console.log(this.posts)
+                            break
+                        }
+                        idx++
+                    }
+                    url = '../../blog/deletePost.php?id=' + id
+                    axios.get(url)
+                    .then(response => {
+                        console.log(response.data)
+                        this.showStatus = true
+                        this.status = response.data
+                    })
+                    .catch(error => {
+                        this.showStatus = true
+                        this.status = 'There was an error: ' + error.message 
+                    })  
+
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

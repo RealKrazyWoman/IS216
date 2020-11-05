@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+ 
+</head>
+
+<body>
+    <h2> Blog Posts </h2> 
+    <div id="app" class="table m-2"> 
+        <!-- Add/Modify the following code -->
+        <table>
+            <tr><th>ID</th><th>Entry</th><th>Mood</th></tr>
+            <tr v-for="post in posts">
+                <td>{{post.id}}</td>
+                <td>{{post.entry}}</td>
+                <td>{{post.mood}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        // Add/Modify the following Vue code
+        new Vue({
+            el: '#app',
+            data: {
+               
+                posts: [] // array of post objects
+            },
+            created: function() { // created is a hook that executes as soon as Vue instance is created
+                axios.get('../../blog/getPosts.php')
+                .then(response => {
+                    // this gets the data, which is an array
+                    post_objs = response.data
+                    for (post of post_objs) {
+                        console.log(post.entry)
+                        // pass the data to Vue instance's posts property
+                        this.posts.push(post)
+                    }
+                })
+                .catch(error => {
+                    this.posts = [{ entry: 'There was an error: ' + error.message }]
+                })
+            }
+        })
+    </script>
+
+</body>
+</html>

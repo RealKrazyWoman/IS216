@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js - Data binding for form elements (Part 2)</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        body {
+            font-size: 110%;
+        }
+
+        .red {
+            border: 5px solid red;
+        }
+
+        .green {
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="adoption">
+        
+        <h1>Animal Care Volunteer Application</h1>
+
+        Your full name:
+        <input type="text" name="fullname" size="40"
+            v-bind:class="[ fullname.length > 0 ? 'green' : 'red' ]"
+            v-model="fullname">
+
+        <br><br>
+
+        Your Gender: 
+        <input type="radio" v-model="gender" name="gender" value="male"> Male
+        <input type="radio" v-model="gender" name="gender" value="female"> Female
+        <br><br>
+
+        You have experience taking care of:<br>
+        <input type="checkbox" v-model="animals" name="animals[]" value="cat"> Cat
+        <input type="checkbox" v-model="animals" name="animals[]" value="dog"> Dog
+        <input type="checkbox" v-model="animals" name="animals[]" value="goat"> Goat
+        <br><br>
+
+        Your desired help area:
+        <select v-model="help_area" name="help">
+            <option value='admin'>Admin</option>
+            <option value='cleaning'>Cleaning</option>
+            <option value='feeding'>Feeding</option>
+        </select>
+
+        <br><br>
+        <button onclick="alert('Thank you for volunteering!')">Submit</button>
+
+
+        <hr>
+        <!-- Email confirmation draft -->
+        Dear {{ get_prefix() }} {{ fullname }},
+
+        <p>
+            Thank you very much for volunteering.
+        </p>
+        <p>
+            You indicated you've experience with:
+
+            <ul>
+                <li v-for="animal in animals">
+                    {{ animal | make_sound }}
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            <b><i>{{ help_area }}</i></b> is your preferred help area.
+        </p>
+
+        <p>
+            <img v-bind:src=" get_image_file() " width="15%" height="15%">
+        </p>
+
+        <!-- Hide this h1 if fullname's length is 0 -->
+        <h1 v-show=" fullname.length > 0 ">
+            <b>{{ message }} </b>
+        </h1>
+
+    </div>
+
+    <script>
+
+        var app = new Vue({
+            el: '#adoption',
+            data: {
+                fullname: 'Your name goes here',
+                gender: 'female',
+                animals: [],
+                help_area: 'admin'
+            },
+            methods: {
+                get_prefix: function() {
+                    let prefix = ''
+                    if( this.gender == 'male' )
+                        prefix = "Mr."
+                    else if( this.gender == 'female' )
+                        prefix = "Ms."
+                    return prefix
+                },
+                get_image_file: function() {
+                    return "img/" + this.help_area + ".png"
+                },
+                display_bottom_h1: function() {
+                    if( this.fullname.length > 0 )
+                        return true
+                    return false
+                }
+            },
+            filters: {
+                make_sound: function(animal){
+                    if( animal == 'cat' )
+                        return animal + " : " + "Meow~~~"
+                    else if( animal == 'dog' )
+                        return animal + " : " + "Woof~~~"
+                    else if( animal == 'goat' )
+                        return animal + " : " + "Meh~~~"
+                    else
+                        return "Dunno"
+                }
+            },
+            computed: {
+                message: function() {
+                    return "Thank you so much, " + this.fullname
+                }
+            }
+        })
+
+    </script>
+
+</body>
+</html>

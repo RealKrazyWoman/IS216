@@ -90,8 +90,8 @@ function extract_display_data(xml) {
                             
                             <!-- YouTube Model -->
                             <p>
-                                <span class="badge badge-pill badge-secondary" data-toggle="modal" 
-                                    data-target="#youtube_modal${counter}" onClick="call_youtube_api('${record.name}')">YouTube Videos</span>
+                                <span class="badge rounded-pill bg-secondary" data-bs-toggle="modal" 
+                                    data-bs-target="#youtube_modal${counter}" onClick="call_youtube_api('${record.name}')">YouTube Videos</span>
                             </p>
 
                             
@@ -102,7 +102,7 @@ function extract_display_data(xml) {
                                         <!-- Modal Header -->
                                         <div class="modal-header">
                                             <h4 class="modal-title">${record.name} Gameplay</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
                                         </div>
                                         
                                         <!-- Modal body -->
@@ -113,7 +113,7 @@ function extract_display_data(xml) {
                                                                                 
                                         <!-- Modal footer -->
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                         </div>
 
                                     </div>
@@ -126,59 +126,59 @@ function extract_display_data(xml) {
                             
                             <p class="text-center">
                                 <button type="button" class="btn mb-1" style="background-color:#ff7002; color: white; width: 220px">
-                                    Battlepoint Cost <span class="badge badge-light">${record.purchase.battlepoint_cost}</span>
+                                    Battlepoint Cost <span class="badge bg-light text-dark">${record.purchase.battlepoint_cost}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#1326ff; color: white; width: 220px">
-                                    Diamond Cost <span class="badge badge-light">${record.purchase.diamond_cost}</span>
+                                    Diamond Cost <span class="badge bg-light text-dark">${record.purchase.diamond_cost}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Movement Speed <span class="badge badge-light">${record.stats.movement_speed}</span>
+                                    Movement Speed <span class="badge bg-light text-dark">${record.stats.movement_speed}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Physical Attack <span class="badge badge-light">${record.stats.physical_attack}</span>
+                                    Physical Attack <span class="badge bg-light text-dark">${record.stats.physical_attack}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Physical Defense <span class="badge badge-light">${record.stats.physical_defense}</span>
+                                    Physical Defense <span class="badge bg-light text-dark">${record.stats.physical_defense}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Magic Power <span class="badge badge-light">${record.stats.magic_power}</span>
+                                    Magic Power <span class="badge bg-light text-dark">${record.stats.magic_power}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Armor <span class="badge badge-light">${record.stats.armor}</span>
+                                    Armor <span class="badge bg-light text-dark">${record.stats.armor}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Magic Resistance <span class="badge badge-light">${record.stats.magic_resistance}</span>
+                                    Magic Resistance <span class="badge bg-light text-dark">${record.stats.magic_resistance}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    HP <span class="badge badge-light">${record.stats.hp}</span>
+                                    HP <span class="badge bg-light text-dark">${record.stats.hp}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Mana <span class="badge badge-light">${record.stats.mana}</span>
+                                    Mana <span class="badge bg-light text-dark">${record.stats.mana}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Attack Speed <span class="badge badge-light">${record.stats.attack_speed}</span>
+                                    Attack Speed <span class="badge bg-light text-dark">${record.stats.attack_speed}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    HP Regen Rate <span class="badge badge-light">${record.stats.hp_regen_rate}</span>
+                                    HP Regen Rate <span class="badge bg-light text-dark">${record.stats.hp_regen_rate}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#03f433; width: 220px">
-                                    Mana Regen Rate <span class="badge badge-light">${record.stats.mana_regen_rate}</span>
+                                    Mana Regen Rate <span class="badge bg-light text-dark">${record.stats.mana_regen_rate}</span>
                                 </button>
 
                                 <button type="button" class="btn mb-1" style="background-color:#3e3b3a; color: white; width: 220px">
-                                    Class <span class="badge badge-light">${record.class}</span>
+                                    Class <span class="badge bg-light text-dark">${record.class}</span>
                                 </button>
 
                             </p>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <title>Challenge 16 - Google Maps API & Weather API</title>
+</head>
+<body>
+    
+    <!-- Top Heading -->
+    <div class="container-fluid" style="background-color: #ecebeb; padding-top: 50px; padding-bottom: 50px; margin-bottom: 30px;">
+        <h2>Google Maps API & Weather API</h2>
+    </div>
+
+    <div class="container-fluid ml-4">
+
+        <form name="myForm" style="display: inline-block">
+
+            <div class="form-group">
+                <label>Latitude</label>
+                <input type="text" name="lat" class="form-control" required placeholder="1.2967" value="1.2967">
+            </div>
+
+            <div class="form-group">
+                <label>Longitude</label>
+                <input type="text" name="long" class="form-control" required placeholder="103.8501" value="103.8501">
+            </div>
+
+        </form>
+
+        <p>
+            <button class="btn btn-primary" onClick="get_postal_code()">Submit</button>
+        </p>
+
+        <!-- By default, left empty but will fill it after calling Google Maps API -->
+        <div id="postal_code" style="margin-top: 20px; background-color: aqua; width: 50%">
+            
+        </div>
+
+    </div>
+
+    <script>
+
+        function get_postal_code() {
+            var lat = document.myForm.lat.value;
+            var long = document.myForm.long.value;
+            
+            console.log("Lat: " + lat);
+            console.log("Long: " + long);
+            
+            // Call Google Maps API
+            call_google_maps_api(lat, long);
+        }
+
+
+        function call_google_maps_api(lat, long) {
+
+            var api_key = ""; // Your own
+            var base_url = "https://maps.googleapis.com/maps/api/geocode/json";
+            var final_url = base_url + "?key=" + api_key + "&address=" + lat + "," + long;
+
+            // Step 1
+            var request = new XMLHttpRequest();
+
+            // Step 2
+            // Register function
+            request.onreadystatechange = function() {
+                // Step 5
+                if( request.readyState == 4 && request.status == 200 ) {
+                    // Response is ready
+                    //console.log(request.responseText);
+
+                    // Convert API response to JavaScript JSON object
+                    var json_obj = JSON.parse(request.responseText);
+
+                    // Call HELPER function to retrieve Postal Code
+                    var postal_code = getPostCode(json_obj);
+
+                    console.log("[call_google_maps_api] " + postal_code);
+                    display_postal_code(postal_code);
+                }
+            }
+
+            // Step 3
+            request.open("GET", final_url, true); // Asynch
+
+            // Step 4
+            request.send();
+        }
+
+        function display_postal_code(postal_code) {
+            document.getElementById("postal_code").innerText = postal_code;
+        }
+
+
+        /******************************************************/
+        /* DO NOT MODIFY - HELPER FUNCTIONS */
+        function getPostCode(data) {
+            //console.log('in getPostCode')
+            console.log(data)
+            var addrcomponents = data["results"][0]["address_components"];
+            var postcode = addrcomponents.filter(postcodeHelper);
+            // country is an array but there should be only one element
+            //console.log(postcode)
+            return postcode[0]["long_name"];
+        }
+
+        function postcodeHelper(addr) {  
+            return addr["types"][0] == "postal_code" ;
+        }
+        /******************************************************/
+
+    </script>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>
